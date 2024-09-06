@@ -13,6 +13,35 @@ export const GlobalStyle = createGlobalStyle`
   text-decoration: none;
   text-transform: capitalize;
   transition: all .2s linear;
-  
 }
+
+a, a:visited {
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%; // need to figure out why this % and need to convert to rem
+  overflow-x: hidden;
+  
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  
+  &::-webkit-scrollbar {  
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {  
+      background-color: ${({ theme }) => theme.backgroundColor}; 
+  }
+  &::-webkit-scrollbar-thumb {  
+      background-color: ${({ theme }) => theme.backgroundColor}; 
+  }
+}
+
+body {
+  background: ${({ theme }) => theme.black};
+  overflow-x: hidden;
+}
+
+
 `;
+
