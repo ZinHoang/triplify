@@ -13,18 +13,7 @@ export const HeaderWrapper = styled.header`
   background-color: ${({ theme }) => theme.backgroundColor};
 
   @media (max-width: 991px) {
-    html {
-      font-size: 55%;
-    }
-    & {
-      padding: 1.5rem 2rem;
-    }
-  }
-
-  @media (max-width: 450px) {
-    html {
-      font-size: 50%;
-    }
+    padding: 1.5rem 2rem;
   }
 `;
 

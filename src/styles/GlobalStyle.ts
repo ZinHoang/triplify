@@ -35,6 +35,17 @@ html {
   &::-webkit-scrollbar-thumb {  
       background-color: ${({ theme }) => theme.backgroundColor}; 
   }
+  
+  @media (max-width: 991px) {
+        font-size: 55%;
+      /* & {
+        padding: 1.5rem 2rem;
+      } */
+    }
+  
+    @media (max-width: 450px) {
+        font-size: 50%;
+    }
 }
 
 body {

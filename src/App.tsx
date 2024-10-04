@@ -1,12 +1,13 @@
 import React from 'react';
 import { Header } from './sections/header/Header';
-import { Home } from './sections/home/Home';
+import { MainContent } from './sections/MainContent';
 
 const App = () => {
   return (
     <>
+      {/* contain top nav bar, footer and the maincontent */}
       <Header />;
-      <Home />;
+      <MainContent />
     </>
   );
 };

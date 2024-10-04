@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { faPaperPlane, faBars } from '@fortawesome/free-solid-svg-icons';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { About } from '../about/About';
+import { Link } from 'react-router-dom';
 import {
   HeaderWrapper,
   Logo,
@@ -24,35 +23,28 @@ export const Header = () => {
         <PaperPlaneIcon icon={faPaperPlane} />
         Triplify
       </Logo>
-
-      <Router>
-        <CustomNav $isActive={isActive}>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/destination">Destination</Link>
-            </li>
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
-            <li>
-              <Link to="/gallery">Gallery</Link>
-            </li>
-            <li>
-              <Link to="/blogs">Blog</Link>
-            </li>
-          </ul>
-        </CustomNav>
-        <Routes>
-          {/* <Route path="/" element={MainContent} /> */}
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Router>
+      <CustomNav $isActive={isActive}>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/destination">Destination</Link>
+          </li>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
+          <li>
+            <Link to="/home">Gallery</Link>
+          </li>
+          <li>
+            <Link to="/blogs">Blog</Link>
+          </li>
+        </ul>
+      </CustomNav>
 
       <ButtonLink>Book Now</ButtonLink>
     </HeaderWrapper>
