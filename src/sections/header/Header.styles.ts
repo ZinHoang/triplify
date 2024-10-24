@@ -12,9 +12,11 @@ export const HeaderWrapper = styled.header`
   z-index: 1000; // this is to be removed if possible
   background-color: ${({ theme }) => theme.backgroundColor};
 
-  @media (max-width: 991px) {
+  padding: 1.5rem 2rem;
+
+  /* @media (max-width: 991px) {
     padding: 1.5rem 2rem;
-  }
+  } */
 `;
 
 export const Logo = styled.span`
