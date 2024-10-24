@@ -1,1 +1,1 @@
-export { ButtonLink } from './ButtonLink.styles';
+export { Button } from './Button.styles';

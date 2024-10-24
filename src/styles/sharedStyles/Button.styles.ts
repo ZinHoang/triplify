@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ButtonLink = styled.a`
+export const Button = styled.div`
   display: inline-block;
   /* margin-top: 1rem; NOT NEEDED YET */
   padding: 1rem 3rem;
@@ -10,6 +10,7 @@ export const ButtonLink = styled.a`
   border-radius: 5rem;
   cursor: pointer;
   background: none;
+  text-align: center;
 
   &:hover {
     background-color: ${({ theme }) => theme.blue};

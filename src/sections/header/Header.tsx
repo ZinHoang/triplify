@@ -7,7 +7,7 @@ import {
   PaperPlaneIcon,
   MenuButton,
 } from './Header.styles';
-import { ButtonLink } from '../../styles/sharedStyles';
+import { Button } from '../../styles/sharedStyles';
 
 export const Header = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -45,7 +45,7 @@ export const Header = () => {
         </ul>
       </CustomNav>
 
-      <ButtonLink>Book Now</ButtonLink>
+      <Button>Book Now</Button>
     </HeaderWrapper>
   );
 };
