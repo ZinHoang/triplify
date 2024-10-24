@@ -5,9 +5,9 @@ import { MainContent } from './sections/MainContent';
 const App = () => {
   return (
     <>
-      {/* contain top nav bar, footer and the maincontent */}
       <Header />;
       <MainContent />
+      {/* <Footer/> */}
     </>
   );
 };

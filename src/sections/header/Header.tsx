@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { faPaperPlane, faBars } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 import {
   HeaderWrapper,
   Logo,
@@ -26,22 +25,22 @@ export const Header = () => {
       <CustomNav $isActive={isActive}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <a href="#about">About</a>
           </li>
           <li>
-            <Link to="/destination">Destination</Link>
+            <a href="#destination">Destination</a>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <Link to="/home">Gallery</Link>
+            <a href="#gallery">Gallery</a>
           </li>
           <li>
-            <Link to="/blogs">Blog</Link>
+            <a href="#blogs">Blog</a>
           </li>
         </ul>
       </CustomNav>
