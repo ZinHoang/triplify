@@ -26,7 +26,7 @@ export const Logo = styled.span`
 `;
 
 export const PaperPlaneIcon = styled(FontAwesomeIcon)`
-  color: ${({ theme }) => theme.blue};
+  color: ${({ theme }) => theme.brightAqua};
   padding-right: 0.5rem;
 `;
 
@@ -43,7 +43,7 @@ export const CustomNav = styled.nav<{ $isActive: boolean }>`
       /* display: inline-block; NO EFFECT*/
       margin: 0 1rem;
       &:hover {
-        color: ${({ theme }) => theme.blue};
+        color: ${({ theme }) => theme.brightAqua};
       }
     }
   }

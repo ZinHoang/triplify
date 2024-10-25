@@ -24,4 +24,4 @@ export const Home = () => {
   );
 };
 
-// Continue the video from 31:24
+// Continue the video from 35:17

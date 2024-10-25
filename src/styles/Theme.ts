@@ -1,5 +1,5 @@
 export const theme = {
-  blue: '#29d9d5',
+  brightAqua: '#29d9d5',
   black: '#111',
   white: '#fff',
   // lightColor: 'rgb(14,13,13)', -- incorrect

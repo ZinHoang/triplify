@@ -53,6 +53,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  padding: 0 10rem;
+}
+
 
 `;
 

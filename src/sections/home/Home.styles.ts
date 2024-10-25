@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import Aurora from '../../assets/images/Aurora.png';
 
 export const HomeWrapper = styled.div`
-  padding: 3rem 5.625rem;
-
+  /* padding: 3rem 5.625rem; */
+  padding: 3rem;
   margin: 0 auto;
   margin-top: 9rem;
-  width: 90%;
+  width: 100%;
   min-height: 80vh;
   border-radius: 1rem;
   background: ${({
