@@ -7,7 +7,7 @@ import {
   VideoControls,
   VideoControlsContainer,
 } from './About.styles';
-import { Button } from '../../styles/sharedStyles';
+import { Button } from '../../styles/sharedStyledComponents';
 
 export const About = () => {
   const [videoIndex, setVideoIndex] = useState(0);

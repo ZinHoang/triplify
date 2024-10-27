@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../../styles/sharedStyles';
+import { Button } from '../../styles/sharedStyledComponents';
 import { BookingFormWrapper, InputContainer } from './BookingForm.styles';
 
 export const BookingForm = () => {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../../styles/sharedStyles';
+import { Button } from '../../styles/sharedStyledComponents';
 
 export const BookingFormWrapper = styled.div`
   width: 75%;

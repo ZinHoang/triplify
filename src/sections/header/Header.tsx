@@ -7,7 +7,7 @@ import {
   PaperPlaneIcon,
   MenuButton,
 } from './Header.styles';
-import { Button } from '../../styles/sharedStyles';
+import { Button } from '../../styles/sharedStyledComponents';
 
 export const Header = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
