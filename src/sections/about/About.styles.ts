@@ -25,8 +25,8 @@ export const VideoControlsContainer = styled.div`
 `;
 export const VideoControls = styled.div`
   margin: 2.5rem 0;
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.white};
   cursor: pointer;
@@ -43,7 +43,7 @@ export const ContentContainer = styled.div`
   }
   & h3 {
     color: ${({ theme }) => theme.white};
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-top: 0.5rem;
   }
   & p {
