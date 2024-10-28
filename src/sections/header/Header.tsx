@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import { faPaperPlane, faBars } from '@fortawesome/free-solid-svg-icons';
-import {
-  HeaderWrapper,
-  Logo,
-  CustomNav,
-  PaperPlaneIcon,
-  MenuButton,
-} from './Header.styles';
-import { Button } from '../../styles/sharedStyledComponents';
+import { HeaderWrapper, Logo, CustomNav, MenuButton } from './Header.styles';
+import { Button, StyledIcon } from '../../styles/sharedStyledComponents';
 
 export const Header = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -19,7 +13,7 @@ export const Header = () => {
     <HeaderWrapper>
       <MenuButton icon={faBars} onClick={handleClick} />
       <Logo>
-        <PaperPlaneIcon icon={faPaperPlane} />
+        <StyledIcon icon={faPaperPlane} />
         Triplify
       </Logo>
       <CustomNav $isActive={isActive}>

@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   outline:none;
   border:none;
   text-decoration: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all .2s linear;
 }
 
@@ -30,10 +30,10 @@ html {
     width: 1rem;
   }
   &::-webkit-scrollbar-track {  
-      background-color: ${({ theme }) => theme.backgroundColor}; 
+      background-color: ${({ theme }) => theme.darkBackgroundColor}; 
   }
   &::-webkit-scrollbar-thumb {  
-      background-color: ${({ theme }) => theme.backgroundColor}; 
+      background-color: ${({ theme }) => theme.darkBackgroundColor}; 
   }
   
   @media (max-width: 991px) {

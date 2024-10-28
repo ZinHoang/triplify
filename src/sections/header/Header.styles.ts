@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header`
   left: 0;
   right: 0;
   z-index: 1000; // this is to be removed if possible
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.darkBackgroundColor};
 
   padding: 1.5rem 2rem;
 
@@ -23,11 +23,6 @@ export const Logo = styled.span`
   color: ${({ theme }) => theme.white};
   font-size: 2.5rem;
   font-weight: bolder;
-`;
-
-export const PaperPlaneIcon = styled(FontAwesomeIcon)`
-  color: ${({ theme }) => theme.brightAqua};
-  padding-right: 0.5rem;
 `;
 
 export const CustomNav = styled.nav<{ $isActive: boolean }>`
@@ -52,7 +47,7 @@ export const CustomNav = styled.nav<{ $isActive: boolean }>`
     top: 99%;
     left: 0;
     right: 0;
-    background-color: ${({ theme }) => theme.backgroundColor};
+    background-color: ${({ theme }) => theme.darkBackgroundColor};
 
     // collapse the menu when not active
     clip-path: ${({ $isActive }) =>

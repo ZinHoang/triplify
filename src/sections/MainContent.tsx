@@ -1,6 +1,7 @@
 import { About } from './about';
 import { Home } from './home';
 import { BookingForm } from './booking-form/BookingForm';
+import { Destination } from './destination/Destination';
 
 export const MainContent = () => {
   return (
@@ -14,10 +15,10 @@ export const MainContent = () => {
       <section id="about">
         <About />
       </section>
-      {/* <section id="destination">
-      <Destination />
-    </section>
-    <section id="services">
+      <section id="destination">
+        <Destination />
+      </section>
+      {/* <section id="services">
       <Services />
     </section>
     <section id="gallery">
