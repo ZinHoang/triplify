@@ -13,7 +13,7 @@ export const Header = () => {
     <HeaderWrapper>
       <MenuButton icon={faBars} onClick={handleClick} />
       <Logo>
-        <StyledIcon icon={faPaperPlane} />
+        <StyledIcon icon={faPaperPlane} paddingRight="0.5rem" />
         Triplify
       </Logo>
       <CustomNav $isActive={isActive}>

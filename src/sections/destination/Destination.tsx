@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  GridContainer,
   HeadingContainer,
   PrimaryHeading,
   StyledIcon,
@@ -18,7 +19,6 @@ import BeachWave from '../../assets/images/beach-wave.jpg';
 import GreenAurora from '../../assets/images/green-Aurora.jpg';
 import BirdWithMountainBackground from '../../assets/images/bird-with-moutain-background.jpg';
 import {
-  GridContainer,
   Card,
   ImageContainer,
   Image,
@@ -30,10 +30,11 @@ export const Destination = () => {
   return (
     <>
       <HeadingContainer>
-        <TitleSpan>Our Destination</TitleSpan>
-        <PrimaryHeading>Discover Your Next Destination</PrimaryHeading>
+        <TitleSpan>Our Favorite Places</TitleSpan>
+        <PrimaryHeading>Your journey begins here</PrimaryHeading>
       </HeadingContainer>
-      <GridContainer>
+
+      <GridContainer columnWidth="27rem">
         <Card>
           <ImageContainer>
             <Image src={UnderOceanDolphin} alt="Dophin in the ocean" />

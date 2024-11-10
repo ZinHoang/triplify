@@ -1,7 +1,9 @@
 import { About } from './about';
+import { BookingForm } from './booking-form';
+import { Destination } from './destination';
+import { Gallery } from './gallery';
 import { Home } from './home';
-import { BookingForm } from './booking-form/BookingForm';
-import { Destination } from './destination/Destination';
+import { Services } from './services';
 
 export const MainContent = () => {
   return (
@@ -18,13 +20,13 @@ export const MainContent = () => {
       <section id="destination">
         <Destination />
       </section>
-      {/* <section id="services">
-      <Services />
-    </section>
-    <section id="gallery">
-      <Gallery />
-    </section>
-    <section id="blogs">
+      <section id="services">
+        <Services />
+      </section>
+      <section id="gallery">
+        <Gallery />
+      </section>
+      {/* <section id="blogs">
       <Blogs />
     </section> */}
     </div>

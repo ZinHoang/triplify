@@ -1,7 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
-export const StyledIcon = styled(FontAwesomeIcon)`
+interface StyledIconProps {
+  paddingRight?: string;
+  marginBottom?: string;
+  fontSize?: string;
+}
+
+export const StyledIcon = styled(FontAwesomeIcon)<StyledIconProps>`
   color: ${({ theme }) => theme.brightAqua};
-  padding-right: 0.5rem;
+  padding-right: ${({ paddingRight }) => paddingRight || '0'};
+  margin-bottom: ${({ marginBottom }) => marginBottom || '0'};
+  font-size: ${({ fontSize }) => fontSize || 'inherit'};
 `;
