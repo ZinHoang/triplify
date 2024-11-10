@@ -13,9 +13,9 @@ export const Home = () => {
       <HomeWrapper>
         <div>
           <TextWithStrokes>Follow us</TextWithStrokes>
-          <LargeHeading>to the unknown</LargeHeading>
+          <LargeHeading>To The Unknown</LargeHeading>
           <ContentText>
-            Random messages hereLet's make it supper long
+          Embark on a journey beyond the ordinary. Discover hidden treasures, breathtaking landscapes, and unforgettable memories.
           </ContentText>
           <Button>Book Now</Button>
         </div>
