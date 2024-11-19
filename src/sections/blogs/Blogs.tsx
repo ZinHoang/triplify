@@ -25,7 +25,7 @@ export const Blogs = () => {
         <PrimaryHeading>Epic journeys and unforgettable stories</PrimaryHeading>
       </HeadingContainer>
 
-      <GridContainer columnWidth="15rem">
+      <GridContainer columnWidth="27rem">
         <Card>
           <ImageContainer>
             <Image
