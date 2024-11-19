@@ -1,4 +1,5 @@
 import { About } from './about';
+import { Blogs } from './blogs/Blogs';
 import { BookingForm } from './booking-form';
 import { Destination } from './destination';
 import { Gallery } from './gallery';
@@ -8,7 +9,7 @@ import { Services } from './services';
 export const MainContent = () => {
   return (
     <div>
-      <section id="home">
+      <section style={{ padding: 0 }} id="home">
         <Home />
       </section>
       <section id="booking-form">
@@ -26,9 +27,9 @@ export const MainContent = () => {
       <section id="gallery">
         <Gallery />
       </section>
-      {/* <section id="blogs">
-      <Blogs />
-    </section> */}
+      <section id="blogs">
+        <Blogs />
+      </section>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Card,
   GridContainer,
   HeadingContainer,
   PrimaryHeading,
@@ -18,12 +19,7 @@ import MountainNZ from '../../assets/images/mountain-NZ.jpg';
 import BeachWave from '../../assets/images/beach-wave.jpg';
 import GreenAurora from '../../assets/images/green-Aurora.jpg';
 import BirdWithMountainBackground from '../../assets/images/bird-with-moutain-background.jpg';
-import {
-  Card,
-  ImageContainer,
-  Image,
-  ContentContainer,
-} from './Destination.styles';
+import { ImageContainer, Image, ContentContainer } from './Destination.styles';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 export const Destination = () => {
@@ -38,26 +34,26 @@ export const Destination = () => {
         <Card>
           <ImageContainer>
             <Image src={UnderOceanDolphin} alt="Dophin in the ocean" />
-            <ContentContainer>
-              <h3>Paradise in the Bahamas</h3>
-              <p>Swim alongside these friendly dolphins.</p>
-              <a href="#">
-                Read more <StyledIcon icon={faAngleRight} />
-              </a>
-            </ContentContainer>
           </ImageContainer>
+          <ContentContainer>
+            <h3>Paradise in the Bahamas</h3>
+            <p>Swim alongside these friendly dolphins.</p>
+            <a href="#">
+              Read more <StyledIcon icon={faAngleRight} />
+            </a>
+          </ContentContainer>
         </Card>
         <Card>
           <ImageContainer>
             <Image src={HaLongBay} alt="Ha Long Bay in Vietnam" />
-            <ContentContainer>
-              <h3>Ha Long bay</h3>
-              <p>Explore emerald waters and towering limestone cliffs.</p>
-              <a href="#">
-                Read more <StyledIcon icon={faAngleRight} />
-              </a>
-            </ContentContainer>
           </ImageContainer>
+          <ContentContainer>
+            <h3>Ha Long bay</h3>
+            <p>Explore emerald waters and towering limestone cliffs.</p>
+            <a href="#">
+              Read more <StyledIcon icon={faAngleRight} />
+            </a>
+          </ContentContainer>
         </Card>
 
         <Card>

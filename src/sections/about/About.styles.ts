@@ -5,7 +5,7 @@ export const AboutWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
-  margin-top: 5rem;
+  margin-top: 10rem;
 `;
 export const Video = styled.video`
   border-radius: 1rem;
