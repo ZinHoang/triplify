@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface StyledIconProps {
   paddingRight?: string;
+  paddingBottom?: string;
   marginBottom?: string;
   fontSize?: string;
 }
@@ -10,6 +11,7 @@ interface StyledIconProps {
 export const StyledIcon = styled(FontAwesomeIcon)<StyledIconProps>`
   color: ${({ theme }) => theme.brightAqua};
   padding-right: ${({ paddingRight }) => paddingRight || '0'};
+  padding-bottom: ${({ paddingBottom }) => paddingBottom || '0'};
   margin-bottom: ${({ marginBottom }) => marginBottom || '0'};
   font-size: ${({ fontSize }) => fontSize || 'inherit'};
 `;
