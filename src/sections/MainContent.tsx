@@ -1,4 +1,5 @@
 import { About } from './about';
+import { Banner } from './banner/Banner';
 import { Blogs } from './blogs/Blogs';
 import { BookingForm } from './booking-form';
 import { Destination } from './destination';
@@ -30,6 +31,7 @@ export const MainContent = () => {
       <section id="blogs">
         <Blogs />
       </section>
+      <Banner />
     </div>
   );
 };
