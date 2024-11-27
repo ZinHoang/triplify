@@ -19,12 +19,6 @@ export const HeaderWrapper = styled.header`
   } */
 `;
 
-export const Logo = styled.span`
-  color: ${({ theme }) => theme.white};
-  font-size: 2.5rem;
-  font-weight: bolder;
-`;
-
 export const CustomNav = styled.nav<{ $isActive: boolean }>`
   & ul {
     list-style-type: none;
