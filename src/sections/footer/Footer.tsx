@@ -34,7 +34,10 @@ export const Footer = () => {
             <StyledIcon icon={faPaperPlane} paddingRight="0.5rem" />
             Triplify
           </Logo>
-          <p>Lorum teppu aoisdoasnd oiasnd</p>
+          <p>
+            Explore. Dream. Discover. <br />
+            Let Triplify take your adventures to the next level!
+          </p>
           <SocialMediaContainer>
             <a href="#">
               <FaFacebookF />
