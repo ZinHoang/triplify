@@ -19,7 +19,7 @@ import {
 export const Services = () => {
   return (
     <>
-      <HeadingContainer marginTop="10rem">
+      <HeadingContainer marginTop="20rem">
         <TitleSpan>What We Offer</TitleSpan>
         <PrimaryHeading>Endless experiences, crafted for you</PrimaryHeading>
       </HeadingContainer>

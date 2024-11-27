@@ -20,7 +20,7 @@ import JungleNZ from '../../assets/images/jungle-NZ.jpg';
 export const Blogs = () => {
   return (
     <>
-      <HeadingContainer marginTop="10rem">
+      <HeadingContainer marginTop="20rem">
         <TitleSpan>Blogs & Posts</TitleSpan>
         <PrimaryHeading>Epic journeys and unforgettable stories</PrimaryHeading>
       </HeadingContainer>

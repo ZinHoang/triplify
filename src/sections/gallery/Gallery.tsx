@@ -18,7 +18,7 @@ import GloomyDayNZ from '../../assets/images/gloomy-day-NZ.jpg';
 export const Gallery = () => {
   return (
     <>
-      <HeadingContainer marginTop="10rem">
+      <HeadingContainer marginTop="20rem">
         <TitleSpan>Captured Moments</TitleSpan>
         <PrimaryHeading>Preserving stories in every frame</PrimaryHeading>
       </HeadingContainer>

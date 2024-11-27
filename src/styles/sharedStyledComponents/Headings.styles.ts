@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 export const HeadingContainer = styled.div<{ marginTop?: string }>`
   text-align: center;
-  margin-top: ${({ marginTop }) => marginTop || '5rem'};
+  margin-top: ${({ marginTop }) => marginTop || '15rem'};
   margin-bottom: 2rem;
+
+  @media (max-width: 450px) {
+    margin-top: ${({ marginTop }) => (marginTop ? '10rem' : '10rem')};
+  }
 `;
 
 export const TitleSpan = styled.span`
