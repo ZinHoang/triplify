@@ -36,7 +36,7 @@ export const Footer = () => {
           </Logo>
           <p>
             Explore. Dream. Discover. <br />
-            Let Triplify take your adventures to the next level!
+            Let Triplify guide you to unforgettable journeys!
           </p>
           <SocialMediaContainer>
             <a href="#">
