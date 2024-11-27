@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const ContentContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
-  /* text-align: center; */
+
   a {
     font-size: 2rem;
     color: ${({ theme }) => theme.white};
@@ -25,4 +28,5 @@ export const IconContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1.4rem;
+  margin-top: auto;
 `;
