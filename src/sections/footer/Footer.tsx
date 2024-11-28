@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Button,
-  GridContainer,
+  GridLayout,
   Logo,
   StyledIcon,
 } from '../../styles/sharedStyledComponents';
@@ -28,7 +28,7 @@ import {
 export const Footer = () => {
   return (
     <FooterWrapper>
-      <GridContainer columnWidth="25rem">
+      <GridLayout columnWidth="25rem">
         <ColumnContainer>
           <Logo fontSize="2.2rem">
             <StyledIcon icon={faPaperPlane} paddingRight="0.5rem" />
@@ -111,7 +111,7 @@ export const Footer = () => {
             <Button>Subscribe</Button>
           </form>
         </ColumnContainer>
-      </GridContainer>
+      </GridLayout>
     </FooterWrapper>
   );
 };

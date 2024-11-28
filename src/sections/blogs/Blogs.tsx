@@ -4,7 +4,7 @@ import {
   HeadingContainer,
   TitleSpan,
   PrimaryHeading,
-  GridContainer,
+  GridLayout,
   Card,
   ImageContainer,
   Image,
@@ -25,7 +25,7 @@ export const Blogs = () => {
         <PrimaryHeading>Epic journeys and unforgettable stories</PrimaryHeading>
       </HeadingContainer>
 
-      <GridContainer columnWidth="27rem">
+      <GridLayout columnWidth="27rem">
         <Card>
           <ImageContainer>
             <Image
@@ -139,7 +139,7 @@ export const Blogs = () => {
             </IconContainer>
           </ContentContainer>
         </Card>
-      </GridContainer>
+      </GridLayout>
     </>
   );
 };

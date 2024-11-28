@@ -3,7 +3,7 @@ import {
   HeadingContainer,
   TitleSpan,
   PrimaryHeading,
-  GridContainer,
+  GridLayout,
   StyledIcon,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, ServicesCard } from './Services.styles';
@@ -24,7 +24,7 @@ export const Services = () => {
         <PrimaryHeading>Endless experiences, crafted for you</PrimaryHeading>
       </HeadingContainer>
 
-      <GridContainer columnWidth="38rem">
+      <GridLayout columnWidth="38rem">
         {/* Initial value was 32rem */}
         <ServicesCard>
           <ContentContainer>
@@ -68,7 +68,7 @@ export const Services = () => {
             <p>Explore the world with our expert guides.</p>
           </ContentContainer>
         </ServicesCard>
-      </GridContainer>
+      </GridLayout>
     </>
   );
 };
