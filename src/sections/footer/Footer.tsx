@@ -26,6 +26,15 @@ import {
 } from './Footer.styles';
 
 export const Footer = () => {
+  const links = [
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#destination', label: 'Destination' },
+    { href: '#services', label: 'Services' },
+    { href: '#gallery', label: 'Gallery' },
+    { href: '#blogs', label: 'Blogs' },
+  ];
+
   return (
     <FooterWrapper>
       <GridLayout columnWidth="25rem">
@@ -57,25 +66,12 @@ export const Footer = () => {
         <ColumnContainer>
           <h3>Quick Links</h3>
           <QuickLinksContainer>
-            <a href="#home">
-              <StyledIcon icon={faArrowRight} paddingRight="0.8rem" /> Home
-            </a>
-            <a href="#about">
-              <StyledIcon icon={faArrowRight} paddingRight="0.8rem" /> About
-            </a>
-            <a href="#destination">
-              <StyledIcon icon={faArrowRight} paddingRight="0.8rem" />{' '}
-              Destination
-            </a>
-            <a href="#services">
-              <StyledIcon icon={faArrowRight} paddingRight="0.8rem" /> Services
-            </a>
-            <a href="#gallery">
-              <StyledIcon icon={faArrowRight} paddingRight="0.8rem" /> Gallery
-            </a>
-            <a href="#blogs">
-              <StyledIcon icon={faArrowRight} paddingRight="0.8rem" /> Blogs
-            </a>
+            {links.map((link) => (
+              <a key={link.href} href={link.href}>
+                <StyledIcon icon={faArrowRight} paddingRight="0.8rem" />{' '}
+                {link.label}
+              </a>
+            ))}
           </QuickLinksContainer>
         </ColumnContainer>
 
