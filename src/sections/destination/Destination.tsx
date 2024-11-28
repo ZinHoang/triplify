@@ -8,6 +8,7 @@ import {
   PrimaryHeading,
   StyledIcon,
   TitleSpan,
+  FadeUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import HaLongBay from '../../assets/images/HaLong-bay.jpg';
 import MountainVietnam from '../../assets/images/mountain-Vietnam.jpg';
@@ -23,11 +24,8 @@ import GreenAurora from '../../assets/images/green-Aurora.jpg';
 import BirdWithMountainBackground from '../../assets/images/bird-with-moutain-background.jpg';
 import { ContentContainer } from './Destination.styles';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { useAosOffset } from '../../hooks/useAosOffset';
 
 export const Destination = () => {
-  const aosOffset = useAosOffset();
-
   const cards = [
     {
       src: UnderOceanDolphin,
@@ -104,18 +102,13 @@ export const Destination = () => {
   ];
 
   return (
-    <>
+    <FadeUpAnimation>
       <HeadingContainer>
         <TitleSpan>Our Favorite Places</TitleSpan>
         <PrimaryHeading>Your journey begins here</PrimaryHeading>
       </HeadingContainer>
 
-      <GridLayout
-        columnWidth="27rem"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-offset={aosOffset}
-      >
+      <GridLayout columnWidth="27rem">
         {cards.map((card, index) => (
           <Card key={index}>
             <ImageContainer>
@@ -131,6 +124,6 @@ export const Destination = () => {
           </Card>
         ))}
       </GridLayout>
-    </>
+    </FadeUpAnimation>
   );
 };

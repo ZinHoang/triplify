@@ -3,6 +3,7 @@ import {
   HeadingContainer,
   TitleSpan,
   PrimaryHeading,
+  ZoomInUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import { GalleryWrapper, GalleryImageContainer } from './Gallery.styles';
 import TulumMexico from '../../assets/images/Tulum-Mexico.jpg';
@@ -15,60 +16,80 @@ import DroneViewOfHalongBay from '../../assets/images/drone-view-of-Halong-Bay.j
 import LovelyBird from '../../assets/images/lovely-bird.jpg';
 import GloomyDayNZ from '../../assets/images/gloomy-day-NZ.jpg';
 
+const galleryImages = [
+  {
+    src: CoralEcosystems,
+    alt: 'Coral ecosystems in the ocean',
+    description: 'Discover the vibrant underwater world',
+    title: 'Coral Ecosystems',
+  },
+  {
+    src: WalkingInTheCave,
+    alt: 'Walking in the cave in Maldives',
+    description: 'Explore the mysterious caves',
+    title: 'Maldives Adventure',
+  },
+  {
+    src: GloomyDayNZ,
+    alt: 'Gloomy day in New Zealand',
+    description: 'Embrace the serene gloom',
+    title: 'New Zealand\'s Gloomy Day',
+  },
+  {
+    src: RoadTripNZ,
+    alt: 'Road trip in New Zealand',
+    description: 'Embark on an epic road trip',
+    title: 'New Zealand Road Trip',
+  },
+  {
+    src: TulumMexico,
+    alt: 'Tulum in Mexico',
+    description: 'Relax in the tropical paradise',
+    title: 'Tulum, Mexico',
+  },
+  {
+    src: Maldives,
+    alt: 'Beautiful Maldives beach',
+    description: 'Experience the pristine beaches',
+    title: 'Maldives Beaches',
+  },
+  {
+    src: Diving,
+    alt: 'Diving adventure',
+    description: 'Dive into the deep blue',
+    title: 'Underwater Diving',
+  },
+  {
+    src: DroneViewOfHalongBay,
+    alt: 'Drone view of Ha Long Bay',
+    description: 'Soar above the stunning bay',
+    title: 'Ha Long Bay',
+  },
+  {
+    src: LovelyBird,
+    alt: 'Lovely bird in nature',
+    description: 'Admire the beauty of wildlife',
+    title: 'Lovely Bird',
+  },
+];
+
 export const Gallery = () => {
   return (
-    <>
+    <ZoomInUpAnimation>
       <HeadingContainer marginTop="20rem">
         <TitleSpan>Captured Moments</TitleSpan>
         <PrimaryHeading>Preserving stories in every frame</PrimaryHeading>
       </HeadingContainer>
+
       <GalleryWrapper>
-        <GalleryImageContainer>
-          <img src={CoralEcosystems} alt="Coral ecosystems in the ocean" />
-          <span>Discover the vibrant underwater world</span>
-          <h3>Coral Ecosystems</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={WalkingInTheCave} alt="Walking in the cave in Maldives" />
-          <span>Explore the mysterious caves</span>
-          <h3>Maldives Adventure</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={GloomyDayNZ} alt="Gloomy day in New Zealand" />
-          <span>Embrace the serene gloom</span>
-          <h3>New Zealand's Gloomy Day</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={RoadTripNZ} alt="Road trip in New Zealand" />
-          <span>Embark on an epic road trip</span>
-          <h3>New Zealand Road Trip</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={TulumMexico} alt="Tulum in Mexico" />
-          <span>Relax in the tropical paradise</span>
-          <h3>Tulum, Mexico</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={Maldives} alt="Beautiful Maldives beach" />
-          <span>Experience the pristine beaches</span>
-          <h3>Maldives Beaches</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={Diving} alt="Diving adventure" />
-          <span>Dive into the deep blue</span>
-          <h3>Underwater Diving</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={DroneViewOfHalongBay} alt="Drone view of Ha Long Bay" />
-          <span>Soar above the stunning bay</span>
-          <h3>Ha Long Bay</h3>
-        </GalleryImageContainer>
-        <GalleryImageContainer>
-          <img src={LovelyBird} alt="Lovely bird in nature" />
-          <span>Admire the beauty of wildlife</span>
-          <h3>Lovely Bird</h3>
-        </GalleryImageContainer>
+        {galleryImages.map((image, index) => (
+          <GalleryImageContainer key={index}>
+            <img src={image.src} alt={image.alt} />
+            <span>{image.description}</span>
+            <h3>{image.title}</h3>
+          </GalleryImageContainer>
+        ))}
       </GalleryWrapper>
-    </>
+    </ZoomInUpAnimation>
   );
 };

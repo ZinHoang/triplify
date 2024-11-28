@@ -9,6 +9,7 @@ import {
   ImageContainer,
   Image,
   StyledIcon,
+  FadeUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, IconContainer } from './Blogs.styles';
 import ScubaDiving from '../../assets/images/scuba-diving.jpg';
@@ -19,7 +20,7 @@ import JungleNZ from '../../assets/images/jungle-NZ.jpg';
 
 export const Blogs = () => {
   return (
-    <>
+    <FadeUpAnimation>
       <HeadingContainer marginTop="20rem">
         <TitleSpan>Blogs & Posts</TitleSpan>
         <PrimaryHeading>Epic journeys and unforgettable stories</PrimaryHeading>
@@ -140,6 +141,6 @@ export const Blogs = () => {
           </ContentContainer>
         </Card>
       </GridLayout>
-    </>
+    </FadeUpAnimation>
   );
 };
