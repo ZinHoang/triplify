@@ -19,9 +19,6 @@ export const MainContent = () => {
       <section id="about">
         <About />
       </section>
-      <section id="destination">
-        <Destination />
-      </section>
       <section id="services">
         <Services />
       </section>
@@ -30,6 +27,9 @@ export const MainContent = () => {
       </section>
       <section id="blogs">
         <Blogs />
+      </section>
+      <section id="destination">
+        <Destination />
       </section>
       <Banner />
     </div>
