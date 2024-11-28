@@ -11,11 +11,12 @@ export const Home = () => {
   return (
     <>
       <HomeWrapper>
-        <div>
+        <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="1500">
           <TextWithStrokes>Follow us</TextWithStrokes>
           <LargeHeading>To The Unknown</LargeHeading>
           <ContentText>
-          Embark on a journey beyond the ordinary. Discover hidden treasures, breathtaking landscapes, and unforgettable memories.
+            Embark on a journey beyond the ordinary. Discover hidden treasures,
+            breathtaking landscapes, and unforgettable memories.
           </ContentText>
           <Button>Book Now</Button>
         </div>
@@ -23,5 +24,3 @@ export const Home = () => {
     </>
   );
 };
-
-// Continue the video from 35:17

@@ -23,9 +23,9 @@ export const Header = () => {
       <MenuButton icon={faBars} onClick={handleClick} />
       <Logo
         fontSize="2.5rem"
-        data-aos="fade-down"
+        data-aos="zoom-in"
         data-aos-delay="300"
-        data-aos-duration="1000"
+        data-aos-duration="1500"
       >
         <StyledIcon icon={faPaperPlane} paddingRight="0.5rem" />
         Triplify
@@ -38,11 +38,7 @@ export const Header = () => {
         </ul>
       </CustomNav>
 
-      <Button
-        data-aos="fade-down"
-        data-aos-delay="300"
-        data-aos-duration="1000"
-      >
+      <Button data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1500">
         Book Now
       </Button>
     </HeaderWrapper>
@@ -61,7 +57,7 @@ const NavLink = ({ href, label }: NavLinkProps) => {
         href={href}
         data-aos="zoom-in-up"
         data-aos-delay="300"
-        data-aos-duration="2000"
+        data-aos-duration="2500"
       >
         {label}
       </a>

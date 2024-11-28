@@ -4,7 +4,11 @@ import { BookingFormWrapper, InputContainer } from './BookingForm.styles';
 
 export const BookingForm = () => {
   return (
-    <BookingFormWrapper>
+    <BookingFormWrapper
+      data-aos="zoom-in"
+      data-aos-delay="150"
+      data-aos-duration="1500"
+    >
       <form>
         <InputContainer>
           <span>where to?</span>

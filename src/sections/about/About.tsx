@@ -19,7 +19,11 @@ export const About = () => {
 
   return (
     <AboutWrapper>
-      <VideoContainer>
+      <VideoContainer
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-offset="-150"
+      >
         <Video src={videos[videoIndex]} muted autoPlay loop></Video>
         <VideoControlsContainer>
           <VideoControls onClick={() => setVideoIndex(0)} />
@@ -27,7 +31,12 @@ export const About = () => {
           <VideoControls onClick={() => setVideoIndex(2)} />
         </VideoControlsContainer>
       </VideoContainer>
-      <ContentContainer>
+      <ContentContainer
+        data-aos="fade-left"
+        data-aos-delay="150"
+        data-aos-duration="1500"
+        data-aos-offset="-150"
+      >
         <span>Why choose us?</span>
         <h3>Embark on an Unforgettable Journey</h3>
         <p>
