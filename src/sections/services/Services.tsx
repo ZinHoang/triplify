@@ -5,6 +5,7 @@ import {
   PrimaryHeading,
   GridLayout,
   StyledIcon,
+  ZoomInUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, ServicesCard } from './Services.styles';
 import {
@@ -17,58 +18,60 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export const Services = () => {
+  const services = [
+    {
+      icon: faGlobe,
+      title: 'WorldWide',
+      description: 'Explore the world with our expert guides.',
+    },
+    {
+      icon: faHiking,
+      title: 'Adventures',
+      description: 'Explore the world with our expert guides.',
+    },
+    {
+      icon: faUtensils,
+      title: 'Food & Drinks',
+      description: 'Explore the world with our expert guides.',
+    },
+    {
+      icon: faHotel,
+      title: 'Luxury Hotels',
+      description: 'Explore the world with our expert guides.',
+    },
+    {
+      icon: faWallet,
+      title: 'Affordable Price',
+      description: 'Explore the world with our expert guides.',
+    },
+    {
+      icon: faHeadset,
+      title: '24/7 Support',
+      description: 'Explore the world with our expert guides.',
+    },
+  ];
   return (
-    <>
+    <ZoomInUpAnimation>
       <HeadingContainer marginTop="20rem">
         <TitleSpan>What We Offer</TitleSpan>
         <PrimaryHeading>Endless experiences, crafted for you</PrimaryHeading>
       </HeadingContainer>
 
-      <GridLayout columnWidth="38rem">
-        {/* Initial value was 32rem */}
-        <ServicesCard>
-          <ContentContainer>
-            <StyledIcon icon={faGlobe} fontSize="5rem" marginBottom="1rem" />
-            <h3>WorldWide</h3>
-            <p>Explore the world with our expert guides.</p>
-          </ContentContainer>
-        </ServicesCard>
-        <ServicesCard>
-          <ContentContainer>
-            <StyledIcon icon={faHiking} fontSize="5rem" marginBottom="1rem" />
-            <h3>Adventures</h3>
-            <p>Explore the world with our expert guides.</p>
-          </ContentContainer>
-        </ServicesCard>
-        <ServicesCard>
-          <ContentContainer>
-            <StyledIcon icon={faUtensils} fontSize="5rem" marginBottom="1rem" />
-            <h3>Food & Drinks</h3>
-            <p>Explore the world with our expert guides.</p>
-          </ContentContainer>
-        </ServicesCard>
-        <ServicesCard>
-          <ContentContainer>
-            <StyledIcon icon={faHotel} fontSize="5rem" marginBottom="1rem" />
-            <h3>Luxury Hotels</h3>
-            <p>Explore the world with our expert guides.</p>
-          </ContentContainer>
-        </ServicesCard>
-        <ServicesCard>
-          <ContentContainer>
-            <StyledIcon icon={faWallet} fontSize="5rem" marginBottom="1rem" />
-            <h3>Affordable Price</h3>
-            <p>Explore the world with our expert guides.</p>
-          </ContentContainer>
-        </ServicesCard>
-        <ServicesCard>
-          <ContentContainer>
-            <StyledIcon icon={faHeadset} fontSize="5rem" marginBottom="1rem" />
-            <h3>24/7 Support</h3>
-            <p>Explore the world with our expert guides.</p>
-          </ContentContainer>
-        </ServicesCard>
+      <GridLayout columnWidth="32rem">
+        {services.map((service, index) => (
+          <ServicesCard key={index}>
+            <ContentContainer>
+              <StyledIcon
+                icon={service.icon}
+                fontSize="5rem"
+                marginBottom="1rem"
+              />
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </ContentContainer>
+          </ServicesCard>
+        ))}
       </GridLayout>
-    </>
+    </ZoomInUpAnimation>
   );
 };
