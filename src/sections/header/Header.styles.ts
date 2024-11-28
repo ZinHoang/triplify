@@ -4,19 +4,14 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.header`
   position: fixed;
   display: flex;
-  align-items: center; // need to check if need both align-items and justify-content
+  align-items: center;
   justify-content: space-between;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; // this is to be removed if possible
+  z-index: 1;
   background-color: ${({ theme }) => theme.darkBackgroundColor};
-
   padding: 1.5rem 2rem;
-
-  /* @media (max-width: 991px) {
-    padding: 1.5rem 2rem;
-  } */
 `;
 
 export const CustomNav = styled.nav<{ $isActive: boolean }>`
@@ -27,9 +22,7 @@ export const CustomNav = styled.nav<{ $isActive: boolean }>`
 
     & li {
       font-size: 1.7rem;
-      /* color: ${({ theme }) => theme.lightColor}; */
       color: ${({ theme }) => theme.white};
-      /* display: inline-block; NO EFFECT*/
       margin: 0 1rem;
       &:hover {
         color: ${({ theme }) => theme.brightAqua};
@@ -43,7 +36,8 @@ export const CustomNav = styled.nav<{ $isActive: boolean }>`
     right: 0;
     background-color: ${({ theme }) => theme.darkBackgroundColor};
 
-    // collapse the menu when not active
+    // collapse the menu when not active.
+    // Get the polygon values at https://bennettfeely.com/clippy/
     clip-path: ${({ $isActive }) =>
       $isActive
         ? 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'

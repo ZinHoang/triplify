@@ -43,9 +43,6 @@ html {
   
   @media (max-width: 991px) {
         font-size: 55%;
-      /* & {
-        padding: 1.5rem 2rem;
-      } */
     }
   
     @media (max-width: 450px) {

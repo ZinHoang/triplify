@@ -4,7 +4,6 @@ import { Button } from '../../styles/sharedStyledComponents';
 export const BookingFormWrapper = styled.div`
   width: 75%;
   margin: 1rem auto;
-  /* margin-top: -5rem; */
   background-color: ${({ theme }) => theme.darkBackgroundColor};
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);

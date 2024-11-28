@@ -2,7 +2,6 @@ export const theme = {
   brightAqua: '#29d9d5',
   black: '#111',
   white: '#fff',
-  // lightColor: 'rgb(14,13,13)', -- incorrect
   lightColor: '#c9c9c9',
   darkBackgroundColor: '#222',
   blackBackgroundColor: 'rgb(17,17,17,.7)',
