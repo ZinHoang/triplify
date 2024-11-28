@@ -9,37 +9,62 @@ export const Header = () => {
     setIsActive(!isActive);
   };
 
+  const links = [
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#destination', label: 'Destination' },
+    { href: '#services', label: 'Services' },
+    { href: '#gallery', label: 'Gallery' },
+    { href: '#blogs', label: 'Blog' },
+  ];
+
   return (
     <HeaderWrapper>
       <MenuButton icon={faBars} onClick={handleClick} />
-      <Logo fontSize="2.5rem">
+      <Logo
+        fontSize="2.5rem"
+        data-aos="fade-down"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
         <StyledIcon icon={faPaperPlane} paddingRight="0.5rem" />
         Triplify
       </Logo>
       <CustomNav $isActive={isActive}>
         <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#destination">Destination</a>
-          </li>
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#gallery">Gallery</a>
-          </li>
-          <li>
-            <a href="#blogs">Blog</a>
-          </li>
+          {links.map((link, index) => (
+            <NavLink key={index} href={link.href} label={link.label} />
+          ))}
         </ul>
       </CustomNav>
 
-      <Button>Book Now</Button>
+      <Button
+        data-aos="fade-down"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
+        Book Now
+      </Button>
     </HeaderWrapper>
+  );
+};
+
+interface NavLinkProps {
+  href: string;
+  label: string;
+}
+
+const NavLink = ({ href, label }: NavLinkProps) => {
+  return (
+    <li>
+      <a
+        href={href}
+        data-aos="zoom-in-up"
+        data-aos-delay="300"
+        data-aos-duration="2000"
+      >
+        {label}
+      </a>
+    </li>
   );
 };
