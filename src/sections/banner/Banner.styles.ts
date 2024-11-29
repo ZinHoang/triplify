@@ -4,7 +4,7 @@ import LandscapeNZ from '../../assets/images/landscape-NZ.jpg';
 export const BannerWraper = styled.div`
   background: ${({
     theme,
-  }) => `linear-gradient( ${theme.LightBlackBackgroundColor}, ${theme.blackBackgroundColor}),
+  }) => `linear-gradient( ${theme.lightBlackBackgroundColor}, ${theme.blackBackgroundColor}),
     url(${LandscapeNZ}) no-repeat`};
   background-size: cover;
   background-position: center;

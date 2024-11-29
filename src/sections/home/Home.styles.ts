@@ -9,7 +9,7 @@ export const HomeWrapper = styled.div`
   border-radius: 1rem;
   background: ${({
     theme,
-  }) => `linear-gradient(${theme.LightBlackBackgroundColor}, ${theme.blackBackgroundColor}),
+  }) => `linear-gradient(${theme.lightBlackBackgroundColor}, ${theme.blackBackgroundColor}),
     url(${Aurora}) no-repeat`};
   background-size: cover;
   background-position: center;
