@@ -5,7 +5,6 @@ import {
   PrimaryHeading,
   GridLayout,
   StyledIcon,
-  ZoomInUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, ServicesCard } from './Services.styles';
 import {
@@ -51,20 +50,20 @@ export const Services = () => {
     },
   ];
   return (
-    <ZoomInUpAnimation>
-      <HeadingContainer marginTop="20rem">
+    <>
+      <HeadingContainer $marginTop="20rem">
         <TitleSpan>What We Offer</TitleSpan>
         <PrimaryHeading>Endless experiences, crafted for you</PrimaryHeading>
       </HeadingContainer>
 
-      <GridLayout columnWidth="32rem">
+      <GridLayout $columnWidth="32rem">
         {services.map((service, index) => (
           <ServicesCard key={index}>
             <ContentContainer>
               <StyledIcon
                 icon={service.icon}
-                fontSize="5rem"
-                marginBottom="1rem"
+                $fontSize="5rem"
+                $marginBottom="1rem"
               />
               <h3>{service.title}</h3>
               <p>{service.description}</p>
@@ -72,6 +71,6 @@ export const Services = () => {
           </ServicesCard>
         ))}
       </GridLayout>
-    </ZoomInUpAnimation>
+    </>
   );
 };
