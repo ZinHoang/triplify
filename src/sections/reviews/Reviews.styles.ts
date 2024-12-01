@@ -40,7 +40,7 @@ export const UserCard = styled.div`
   flex: 1 1 20rem;
   border-radius: 1rem;
   padding: 2rem;
-  background-color: ${({ theme }) => theme.blackBackgroundColor};
+  background-color: ${({ theme }) => theme.darkBackgroundColor};
   border: 0.2rem solid ${({ theme }) => theme.blackBackgroundColor};
   &:hover {
     border: ${({ theme }) => theme.border};
