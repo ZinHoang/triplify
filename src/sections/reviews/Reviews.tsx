@@ -2,8 +2,8 @@ import React from 'react';
 import {
   ReviewsWrapper,
   ReviewsContent,
-  UserCard,
-  UserCardContainer,
+  ReviewsCard,
+  ReviewsCardContainer,
   UserDetail,
   UserNameAndJob,
 } from './Reviews.styles';
@@ -30,8 +30,8 @@ export const Reviews = () => {
           escapades and create your own story of wonder and awe.
         </p>
       </ReviewsContent>
-      <UserCardContainer>
-        <UserCard>
+      <ReviewsCardContainer>
+        <ReviewsCard>
           <p>The trip was absolutely amazing!</p>
           <UserDetail>
             <StyledIcon icon={faFaceGrinHearts} />
@@ -40,8 +40,8 @@ export const Reviews = () => {
               <span>Designer</span>
             </UserNameAndJob>
           </UserDetail>
-        </UserCard>
-        <UserCard>
+        </ReviewsCard>
+        <ReviewsCard>
           <p>Every moments were unforgettable.</p>
           <UserDetail>
             <StyledIcon icon={faFaceGrinBeam} />
@@ -50,8 +50,8 @@ export const Reviews = () => {
               <span>Photographer</span>
             </UserNameAndJob>
           </UserDetail>
-        </UserCard>
-        <UserCard>
+        </ReviewsCard>
+        <ReviewsCard>
           <p>Truly a once-in-a-lifetime experience.</p>
           <UserDetail>
             <StyledIcon icon={faFaceGrinStars} />
@@ -60,8 +60,8 @@ export const Reviews = () => {
               <span>Travel Blogger</span>
             </UserNameAndJob>
           </UserDetail>
-        </UserCard>
-        <UserCard>
+        </ReviewsCard>
+        <ReviewsCard>
           <p>
             The trip was absolutely amazing! The guides were knowledgeable and
             the scenery was breathtaking.
@@ -73,8 +73,8 @@ export const Reviews = () => {
               <span>Adventurer</span>
             </UserNameAndJob>
           </UserDetail>
-        </UserCard>
-        <UserCard>
+        </ReviewsCard>
+        <ReviewsCard>
           <p>
             Exceptional service and stunning locations. I can't wait to book my
             next trip! Everything was perfect from start to finish.
@@ -86,8 +86,8 @@ export const Reviews = () => {
               <span>Nature Enthusiast</span>
             </UserNameAndJob>
           </UserDetail>
-        </UserCard>
-      </UserCardContainer>
+        </ReviewsCard>
+      </ReviewsCardContainer>
     </ReviewsWrapper>
   );
 };

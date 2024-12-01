@@ -29,14 +29,14 @@ export const ReviewsContent = styled.div`
   }
 `;
 
-export const UserCardContainer = styled.div`
+export const ReviewsCardContainer = styled.div`
   flex: 1 1 42rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
 `;
 
-export const UserCard = styled.div`
+export const ReviewsCard = styled.div`
   flex: 1 1 20rem;
   border-radius: 1rem;
   padding: 2rem;
