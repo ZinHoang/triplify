@@ -12,9 +12,9 @@ export const Header = () => {
   const links = [
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
+    { href: '#gallery', label: 'Gallery' },
     { href: '#destination', label: 'Destination' },
     { href: '#services', label: 'Services' },
-    { href: '#gallery', label: 'Gallery' },
     { href: '#blogs', label: 'Blog' },
   ];
 

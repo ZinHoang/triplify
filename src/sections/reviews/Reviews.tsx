@@ -36,8 +36,10 @@ export const Reviews = () => {
           <UserDetail>
             <StyledIcon icon={faFaceGrinHearts} />
             <UserNameAndJob>
-              <h3>John Doe</h3>
-              <span>Designer</span>
+              <h3>John Vague</h3>
+              <span>
+                <i> Designer</i>
+              </span>
             </UserNameAndJob>
           </UserDetail>
         </ReviewsCard>
@@ -46,8 +48,10 @@ export const Reviews = () => {
           <UserDetail>
             <StyledIcon icon={faFaceGrinBeam} />
             <UserNameAndJob>
-              <h3>Jane Smith</h3>
-              <span>Photographer</span>
+              <h3>Jane Roller</h3>
+              <span>
+                <i> Photographer</i>
+              </span>
             </UserNameAndJob>
           </UserDetail>
         </ReviewsCard>
@@ -56,8 +60,10 @@ export const Reviews = () => {
           <UserDetail>
             <StyledIcon icon={faFaceGrinStars} />
             <UserNameAndJob>
-              <h3>Emily Johnson</h3>
-              <span>Travel Blogger</span>
+              <h3>Emily Jackquie</h3>
+              <span>
+                <i>Travel Blogger</i>
+              </span>
             </UserNameAndJob>
           </UserDetail>
         </ReviewsCard>
@@ -69,8 +75,10 @@ export const Reviews = () => {
           <UserDetail>
             <StyledIcon icon={faFaceDizzy} />
             <UserNameAndJob>
-              <h3>Michael Brown</h3>
-              <span>Adventurer</span>
+              <h3>Michael Brendon</h3>
+              <span>
+                <i>Adventurer</i>
+              </span>
             </UserNameAndJob>
           </UserDetail>
         </ReviewsCard>
@@ -83,7 +91,9 @@ export const Reviews = () => {
             <StyledIcon icon={faFaceSmileBeam} />
             <UserNameAndJob>
               <h3>Sarah Wilson</h3>
-              <span>Nature Enthusiast</span>
+              <span>
+                <i>Nature Enthusiast</i>
+              </span>
             </UserNameAndJob>
           </UserDetail>
         </ReviewsCard>

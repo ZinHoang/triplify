@@ -29,9 +29,9 @@ export const Footer = () => {
   const links = [
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
+    { href: '#gallery', label: 'Gallery' },
     { href: '#destination', label: 'Destination' },
     { href: '#services', label: 'Services' },
-    { href: '#gallery', label: 'Gallery' },
     { href: '#blogs', label: 'Blogs' },
   ];
 
@@ -48,16 +48,16 @@ export const Footer = () => {
             Let Triplify guide you to unforgettable journeys!
           </p>
           <SocialMediaContainer>
-            <a href="#">
+            <a href="https://www.facebook.com/zinniz.hoang">
               <FaFacebookF />
             </a>
             <a href="#">
               <RiMessengerFill />
             </a>
-            <a href="#">
+            <a href="https://github.com/ZinHoang">
               <PiGithubLogoFill />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/zinhoang/">
               <BiLogoLinkedin />
             </a>
           </SocialMediaContainer>
