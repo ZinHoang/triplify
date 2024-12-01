@@ -9,7 +9,6 @@ import {
   ImageContainer,
   Image,
   StyledIcon,
-  FadeUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, IconContainer } from './Blogs.styles';
 import ScubaDiving from '../../assets/images/scuba-diving.jpg';
@@ -19,128 +18,81 @@ import BoatTravelingOnWater from '../../assets/images/boat-traveling-on-water.jp
 import JungleNZ from '../../assets/images/jungle-NZ.jpg';
 
 export const Blogs = () => {
+  const blogPosts = [
+    {
+      src: HolidayInMaldives,
+      alt: 'Stunning Maldives beach with turquoise waters',
+      title: 'Embrace the journey of a lifetime',
+      description:
+        'Discover the magic of swimming alongside playful dolphins in paradise.',
+      date: '18th May, 2022',
+      author: 'Admin',
+    },
+    {
+      src: BoatTravelingOnWater,
+      alt: 'Boat gliding over crystal clear waters',
+      title: 'Sail into adventure',
+      description:
+        'Feel the breeze on your face as you embark on an unforgettable boat journey.',
+      date: '21st Feb, 2023',
+      author: 'Admin',
+    },
+    {
+      src: JungleNZ,
+      alt: 'Lush jungle landscape in New Zealand',
+      title: "Explore New Zealand's wild beauty",
+      description:
+        "Venture deep into untouched paradise of nature amidst New Zealand's lush forests.",
+      date: '3rd Oct, 2023',
+      author: 'Admin',
+    },
+    {
+      src: ViewFromPlane,
+      alt: 'A breathtaking view from a plane over a vast landscape',
+      title: 'Soar above the world',
+      description:
+        'Take in the awe-inspiring views from 30,000 feet above the earth.',
+      date: '15th Jan, 2024',
+      author: 'Admin',
+    },
+    {
+      src: ScubaDiving,
+      alt: 'Scuba diver exploring vibrant coral reefs',
+      title: 'Dive into an underwater wonderland',
+      description:
+        'Experience the thrill of scuba diving amidst vibrant coral reefs and marine life.',
+      date: '20th Nov, 2024',
+      author: 'Admin',
+    },
+  ];
   return (
-    <FadeUpAnimation>
-      <HeadingContainer marginTop="20rem">
+    <>
+      <HeadingContainer $marginTop="20rem">
         <TitleSpan>Blogs & Posts</TitleSpan>
         <PrimaryHeading>Epic journeys and unforgettable stories</PrimaryHeading>
       </HeadingContainer>
 
-      <GridLayout columnWidth="27rem">
-        <Card>
-          <ImageContainer>
-            <Image
-              src={HolidayInMaldives}
-              alt="Stunning Maldives beach with turquoise waters"
-            />
-          </ImageContainer>
-          <ContentContainer>
-            <a href="#">Embrace the journey of a lifetime</a>
-            <p>
-              Discover the magic of swimming alongside playful dolphins in
-              paradise.
-            </p>
-            <IconContainer>
-              <p>
-                <StyledIcon icon={faClock} /> 18th May, 2022
-              </p>
-              <p>
-                <StyledIcon icon={faUser} /> By Admin
-              </p>
-            </IconContainer>
-          </ContentContainer>
-        </Card>
-        <Card>
-          <ImageContainer>
-            <Image
-              src={BoatTravelingOnWater}
-              alt="Boat gliding over crystal clear waters"
-            />
-          </ImageContainer>
-          <ContentContainer>
-            <a href="#">Sail into adventure</a>
-            <p>
-              Feel the breeze on your face as you embark on an unforgettable
-              boat journey.
-            </p>
-            <IconContainer>
-              <p>
-                <StyledIcon icon={faClock} /> 21st Feb, 2023
-              </p>
-              <p>
-                <StyledIcon icon={faUser} /> By Admin
-              </p>
-            </IconContainer>
-          </ContentContainer>
-        </Card>
-
-        <Card>
-          <ImageContainer>
-            <Image src={JungleNZ} alt="Lush jungle landscape in New Zealand" />
-          </ImageContainer>
-          <ContentContainer>
-            <a href="#">Explore New Zealand's wild beauty</a>
-            <p>
-              Venture deep into untouched paradise of nature amidst New
-              Zealand's lush forests.
-            </p>
-            <IconContainer>
-              <p>
-                <StyledIcon icon={faClock} /> 3rd Oct, 2023
-              </p>
-              <p>
-                <StyledIcon icon={faUser} /> By Admin
-              </p>
-            </IconContainer>
-          </ContentContainer>
-        </Card>
-        <Card>
-          <ImageContainer>
-            <Image
-              src={ViewFromPlane}
-              alt="A breathtaking view from a plane over a vast landscape"
-            />
-          </ImageContainer>
-          <ContentContainer>
-            <a href="#">Soar above the world</a>
-            <p>
-              Take in the awe-inspiring views from 30,000 feet above the earth.
-            </p>
-            <IconContainer>
-              <p>
-                <StyledIcon icon={faClock} /> 15th Jan, 2024
-              </p>
-              <p>
-                <StyledIcon icon={faUser} /> By Admin
-              </p>
-            </IconContainer>
-          </ContentContainer>
-        </Card>
-
-        <Card>
-          <ImageContainer>
-            <Image
-              src={ScubaDiving}
-              alt="Scuba diver exploring vibrant coral reefs"
-            />
-          </ImageContainer>
-          <ContentContainer>
-            <a href="#">Dive into an underwater wonderland</a>
-            <p>
-              Experience the thrill of scuba diving amidst vibrant coral reefs
-              and marine life.
-            </p>
-            <IconContainer>
-              <p>
-                <StyledIcon icon={faClock} /> 20th Nov, 2024
-              </p>
-              <p>
-                <StyledIcon icon={faUser} /> By Admin
-              </p>
-            </IconContainer>
-          </ContentContainer>
-        </Card>
+      <GridLayout $columnWidth="27rem">
+        {blogPosts.map((post, index) => (
+          <Card key={index}>
+            <ImageContainer>
+              <Image src={post.src} alt={post.alt} />
+            </ImageContainer>
+            <ContentContainer>
+              <a href="#">{post.title}</a>
+              <p>{post.description}</p>
+              <IconContainer>
+                <p>
+                  <StyledIcon icon={faClock} /> {post.date}
+                </p>
+                <p>
+                  <StyledIcon icon={faUser} /> By {post.author}
+                </p>
+              </IconContainer>
+            </ContentContainer>
+          </Card>
+        ))}
       </GridLayout>
-    </FadeUpAnimation>
+    </>
   );
 };
