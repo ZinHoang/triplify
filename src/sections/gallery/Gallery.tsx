@@ -75,21 +75,22 @@ const galleryImages = [
 
 export const Gallery = () => {
   return (
-    <ZoomInUpAnimation>
-      <HeadingContainer marginTop="20rem">
+    <>
+      <HeadingContainer $marginTop="20rem">
         <TitleSpan>Captured Moments</TitleSpan>
         <PrimaryHeading>Preserving stories in every frame</PrimaryHeading>
       </HeadingContainer>
-
-      <GalleryWrapper>
-        {galleryImages.map((image, index) => (
-          <GalleryImageContainer key={index}>
-            <img src={image.src} alt={image.alt} />
-            <span>{image.description}</span>
-            <h3>{image.title}</h3>
-          </GalleryImageContainer>
-        ))}
-      </GalleryWrapper>
-    </ZoomInUpAnimation>
+      <ZoomInUpAnimation>
+        <GalleryWrapper>
+          {galleryImages.map((image, index) => (
+            <GalleryImageContainer key={index}>
+              <img src={image.src} alt={image.alt} />
+              <span>{image.description}</span>
+              <h3>{image.title}</h3>
+            </GalleryImageContainer>
+          ))}
+        </GalleryWrapper>
+      </ZoomInUpAnimation>
+    </>
   );
 };

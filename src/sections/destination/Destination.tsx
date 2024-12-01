@@ -102,28 +102,29 @@ export const Destination = () => {
   ];
 
   return (
-    <FadeUpAnimation>
+    <>
       <HeadingContainer>
         <TitleSpan>Our Favorite Places</TitleSpan>
         <PrimaryHeading>Your journey begins here</PrimaryHeading>
       </HeadingContainer>
-
-      <GridLayout columnWidth="27rem">
-        {cards.map((card, index) => (
-          <Card key={index}>
-            <ImageContainer>
-              <Image src={card.src} alt={card.alt} />
-            </ImageContainer>
-            <ContentContainer>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-              <a href="#">
-                Read more <StyledIcon icon={faAngleRight} />
-              </a>
-            </ContentContainer>
-          </Card>
-        ))}
-      </GridLayout>
-    </FadeUpAnimation>
+      <FadeUpAnimation>
+        <GridLayout $columnWidth="27rem">
+          {cards.map((card, index) => (
+            <Card key={index}>
+              <ImageContainer>
+                <Image src={card.src} alt={card.alt} />
+              </ImageContainer>
+              <ContentContainer>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <a href="#">
+                  Read more <StyledIcon icon={faAngleRight} />
+                </a>
+              </ContentContainer>
+            </Card>
+          ))}
+        </GridLayout>
+      </FadeUpAnimation>
+    </>
   );
 };
