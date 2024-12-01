@@ -5,7 +5,7 @@ const grid = (val: string) => css`
   grid-template-columns: repeat(auto-fit, minmax(${val}, 1fr));
   gap: 1.5rem;
 `;
-export const GridLayout = styled.div<{ columnWidth: string }>`
-  ${({ columnWidth }) => grid(columnWidth)};
+export const GridLayout = styled.div<{ $columnWidth: string }>`
+  ${({ $columnWidth }) => grid($columnWidth)};
   color: ${({ theme }) => theme.lightColor};
 `;

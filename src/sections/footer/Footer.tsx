@@ -37,10 +37,10 @@ export const Footer = () => {
 
   return (
     <FooterWrapper>
-      <GridLayout columnWidth="25rem">
+      <GridLayout $columnWidth="25rem">
         <ColumnContainer>
           <Logo fontSize="2.2rem">
-            <StyledIcon icon={faPaperPlane} paddingRight="0.5rem" />
+            <StyledIcon icon={faPaperPlane} $paddingRight="0.5rem" />
             Triplify
           </Logo>
           <p>
@@ -68,7 +68,7 @@ export const Footer = () => {
           <QuickLinksContainer>
             {links.map((link) => (
               <a key={link.href} href={link.href}>
-                <StyledIcon icon={faArrowRight} paddingRight="0.8rem" />{' '}
+                <StyledIcon icon={faArrowRight} $paddingRight="0.8rem" />{' '}
                 {link.label}
               </a>
             ))}
@@ -79,22 +79,22 @@ export const Footer = () => {
           <h3>Contact Info</h3>
           <p>
             {' '}
-            <StyledIcon icon={faMap} paddingRight="0.8rem" />
+            <StyledIcon icon={faMap} $paddingRight="0.8rem" />
             Address: 1234, Park Avenue, NY
           </p>
           <p>
             {' '}
-            <StyledIcon icon={faPhone} paddingRight="0.8rem" />
+            <StyledIcon icon={faPhone} $paddingRight="0.8rem" />
             +122-123-456
           </p>
           <p>
             {' '}
-            <StyledIcon icon={faEnvelope} paddingRight="0.8rem" />
+            <StyledIcon icon={faEnvelope} $paddingRight="0.8rem" />
             newsletter@gmail.com
           </p>
           <p>
             {' '}
-            <StyledIcon icon={faClock} paddingRight="0.8rem" />
+            <StyledIcon icon={faClock} $paddingRight="0.8rem" />
             7:00am - 10:00pm
           </p>
         </ColumnContainer>

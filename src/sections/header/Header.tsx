@@ -27,7 +27,7 @@ export const Header = () => {
         data-aos-delay="300"
         data-aos-duration="1500"
       >
-        <StyledIcon icon={faPaperPlane} paddingRight="0.5rem" />
+        <StyledIcon icon={faPaperPlane} $paddingRight="0.5rem" />
         Triplify
       </Logo>
       <CustomNav $isActive={isActive}>
