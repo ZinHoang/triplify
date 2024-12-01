@@ -7,7 +7,10 @@ import {
   VideoControls,
   VideoControlsContainer,
 } from './About.styles';
-import { Button } from '../../styles/sharedStyledComponents';
+import {
+  Button,
+  FadeRightAnimation,
+} from '../../styles/sharedStyledComponents';
 
 export const About = () => {
   const [videoIndex, setVideoIndex] = useState(0);
@@ -18,37 +21,30 @@ export const About = () => {
   ];
 
   return (
-    <AboutWrapper>
-      <VideoContainer
-        data-aos="fade-right"
-        data-aos-duration="1500"
-        data-aos-offset="-150"
-      >
-        <Video src={videos[videoIndex]} muted autoPlay loop></Video>
-        <VideoControlsContainer>
-          <VideoControls onClick={() => setVideoIndex(0)} />
-          <VideoControls onClick={() => setVideoIndex(1)} />
-          <VideoControls onClick={() => setVideoIndex(2)} />
-        </VideoControlsContainer>
-      </VideoContainer>
-      <ContentContainer
-        data-aos="fade-left"
-        data-aos-delay="150"
-        data-aos-duration="1500"
-        data-aos-offset="-150"
-      >
-        <span>Why choose us?</span>
-        <h3>Embark on an Unforgettable Journey</h3>
-        <p>
-          Join us to explore the hidden gems of nature, where every moment is a
-          new adventure waiting to be discovered. <br />
-          Experience the thrill of the wild, the serenity of untouched
-          landscapes, and the beauty of diverse ecosystems. <br />
-          Let us guide you through an extraordinary journey that will leave you
-          with memories to cherish for a lifetime.
-        </p>
-        <Button>Read More</Button>
-      </ContentContainer>
-    </AboutWrapper>
+    <FadeRightAnimation>
+      <AboutWrapper>
+        <VideoContainer>
+          <Video src={videos[videoIndex]} muted autoPlay loop></Video>
+          <VideoControlsContainer>
+            <VideoControls onClick={() => setVideoIndex(0)} />
+            <VideoControls onClick={() => setVideoIndex(1)} />
+            <VideoControls onClick={() => setVideoIndex(2)} />
+          </VideoControlsContainer>
+        </VideoContainer>
+        <ContentContainer>
+          <span>Why choose us?</span>
+          <h3>Embark on an Unforgettable Journey</h3>
+          <p>
+            Join us to explore the hidden gems of nature, where every moment is
+            a new adventure waiting to be discovered. <br />
+            Experience the thrill of the wild, the serenity of untouched
+            landscapes, and the beauty of diverse ecosystems. <br />
+            Let us guide you through an extraordinary journey that will leave
+            you with memories to cherish for a lifetime.
+          </p>
+          <Button>Read More</Button>
+        </ContentContainer>
+      </AboutWrapper>
+    </FadeRightAnimation>
   );
 };
