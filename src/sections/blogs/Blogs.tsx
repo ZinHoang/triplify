@@ -7,8 +7,8 @@ import {
   GridLayout,
   Card,
   ImageContainer,
-  Image,
   StyledIcon,
+  Image,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, IconContainer } from './Blogs.styles';
 import ScubaDiving from '../../assets/images/scuba-diving.jpg';
@@ -26,7 +26,7 @@ export const Blogs = () => {
       description:
         'Discover the magic of swimming alongside playful dolphins in paradise.',
       date: '18th May, 2022',
-      author: 'Admin',
+      author: 'McKenzie',
     },
     {
       src: BoatTravelingOnWater,
@@ -35,7 +35,7 @@ export const Blogs = () => {
       description:
         'Feel the breeze on your face as you embark on an unforgettable boat journey.',
       date: '21st Feb, 2023',
-      author: 'Admin',
+      author: 'William',
     },
     {
       src: JungleNZ,
@@ -44,7 +44,7 @@ export const Blogs = () => {
       description:
         "Venture deep into untouched paradise of nature amidst New Zealand's lush forests.",
       date: '3rd Oct, 2023',
-      author: 'Admin',
+      author: 'Brendon',
     },
     {
       src: ViewFromPlane,
@@ -53,7 +53,7 @@ export const Blogs = () => {
       description:
         'Take in the awe-inspiring views from 30,000 feet above the earth.',
       date: '15th Jan, 2024',
-      author: 'Admin',
+      author: 'Tayla',
     },
     {
       src: ScubaDiving,
@@ -62,7 +62,7 @@ export const Blogs = () => {
       description:
         'Experience the thrill of scuba diving amidst vibrant coral reefs and marine life.',
       date: '20th Nov, 2024',
-      author: 'Admin',
+      author: 'Jenifer',
     },
   ];
   return (

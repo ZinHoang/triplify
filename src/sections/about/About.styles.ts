@@ -30,7 +30,7 @@ export const VideoControls = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.white};
   cursor: pointer;
-  & hover {
+  &:hover {
     background-color: ${({ theme }) => theme.brightAqua};
   }
 `;
