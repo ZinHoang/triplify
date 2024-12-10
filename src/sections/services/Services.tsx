@@ -13,7 +13,7 @@ import {
   faUtensils,
   faHeadset,
   faHotel,
-  faWallet,
+  faMoneyCheckDollar,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const Services = () => {
@@ -39,7 +39,7 @@ export const Services = () => {
       description: 'Explore the world with our expert guides.',
     },
     {
-      icon: faWallet,
+      icon: faMoneyCheckDollar,
       title: 'Affordable Price',
       description: 'Explore the world with our expert guides.',
     },

@@ -11,18 +11,18 @@ export const BookingForm = () => {
     >
       <form>
         <InputContainer>
-          <span>where to?</span>
+          <span>Where are you going?</span>
           <input type="text" placeholder="place name" defaultValue="" />
         </InputContainer>
         <InputContainer>
-          <span>when?</span>
+          <span>Travel dates</span>
           <input type="date" defaultValue="" />
         </InputContainer>
         <InputContainer>
-          <span>how many?</span>
+          <span>Passengers</span>
           <input
             type="number"
-            placeholder="number of travellers"
+            placeholder="number of passengers"
             defaultValue=""
           />
         </InputContainer>
