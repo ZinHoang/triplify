@@ -1,3 +1,4 @@
+import React from 'react';
 import { About } from './about';
 import { Banner } from './banner/Banner';
 import { Blogs } from './blogs/Blogs';
@@ -7,33 +8,48 @@ import { Gallery } from './gallery';
 import { Home } from './home';
 import { Reviews } from './reviews/Reviews';
 import { Services } from './services';
+import { Element } from 'react-scroll';
 
 export const MainContent = () => {
   return (
-    <div>
-      <section style={{ padding: 0 }} id="home">
-        <Home />
-      </section>
-      <section id="booking-form">
-        <BookingForm />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="gallery">
-        <Gallery />
-      </section>
-      <section id="destination">
-        <Destination />
-      </section>
-      <section id="services">
-        <Services />
-      </section>
+    <>
+      <Element name="home">
+        <section style={{ padding: 0 }}>
+          <Home />
+        </section>
+      </Element>
+      <Element name="booking-form">
+        <section>
+          <BookingForm />
+        </section>
+      </Element>
+      <Element name="about">
+        <section>
+          <About />
+        </section>
+      </Element>
+      <Element name="gallery">
+        <section>
+          <Gallery />
+        </section>
+      </Element>
+      <Element name="destination">
+        <section>
+          <Destination />
+        </section>
+      </Element>
+      <Element name="services">
+        <section>
+          <Services />
+        </section>
+      </Element>
       <Reviews />
-      <section id="blogs">
-        <Blogs />
-      </section>
+      <Element name="blogs">
+        <section>
+          <Blogs />
+        </section>
+      </Element>
       <Banner />
-    </div>
+    </>
   );
 };

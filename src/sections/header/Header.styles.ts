@@ -27,6 +27,7 @@ export const CustomNav = styled.nav<{ $isActive: boolean }>`
       &:hover {
         color: ${({ theme }) => theme.brightAqua};
       }
+      cursor: pointer;
     }
   }
   @media (max-width: 768px) {

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { faPaperPlane, faBars } from '@fortawesome/free-solid-svg-icons';
 import { HeaderWrapper, CustomNav, MenuButton } from './Header.styles';
 import { Button, Logo, StyledIcon } from '../../styles/sharedStyledComponents';
+import { Link } from 'react-scroll';
 
 export const Header = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -10,12 +11,12 @@ export const Header = () => {
   };
 
   const links = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#gallery', label: 'Gallery' },
-    { href: '#destination', label: 'Destination' },
-    { href: '#services', label: 'Services' },
-    { href: '#blogs', label: 'Blog' },
+    { href: 'home', label: 'Home' },
+    { href: 'about', label: 'About' },
+    { href: 'gallery', label: 'Gallery' },
+    { href: 'destination', label: 'Destination' },
+    { href: 'services', label: 'Services' },
+    { href: 'blogs', label: 'Blog' },
   ];
 
   return (
@@ -53,14 +54,16 @@ interface NavLinkProps {
 const NavLink = ({ href, label }: NavLinkProps) => {
   return (
     <li>
-      <a
-        href={href}
+      <Link
+        to={href}
+        smooth={true}
+        duration={500}
         data-aos="zoom-in-up"
         data-aos-delay="300"
         data-aos-duration="2500"
       >
         {label}
-      </a>
+      </Link>
     </li>
   );
 };
