@@ -28,7 +28,13 @@ export const About = () => {
     <AboutWrapper>
       <VideoContainer>
         <FadeLeftAnimation>
-          <Video src={videos[videoIndex]} muted autoPlay loop></Video>
+          <Video
+            src={videos[videoIndex]}
+            muted
+            autoPlay
+            loop
+            playsInline
+          ></Video>
           <VideoControlsContainer>
             <VideoControls onClick={() => setVideoIndex(0)} />
             <VideoControls onClick={() => setVideoIndex(1)} />

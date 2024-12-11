@@ -14,6 +14,10 @@ export const BannerWraper = styled.div`
   line-height: 1.5;
   text-align: center;
 
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
+
   span {
     font-size: 2rem;
     color: ${({ theme }) => theme.brightAqua};
