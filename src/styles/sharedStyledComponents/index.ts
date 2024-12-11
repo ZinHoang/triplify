@@ -11,5 +11,5 @@ export {
   FadeLeftAnimation,
   FadeRightAnimation,
   FadeUpAnimation,
-  PulseAnimation,
+  HeartBeatAnimation,
 } from './Animations';

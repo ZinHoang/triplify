@@ -4,7 +4,7 @@ import { HeaderWrapper, CustomNav, MenuButton } from './Header.styles';
 import {
   Button,
   Logo,
-  PulseAnimation,
+  HeartBeatAnimation,
   StyledIcon,
 } from '../../styles/sharedStyledComponents';
 import { Link } from 'react-scroll';
@@ -27,25 +27,25 @@ export const Header = () => {
   return (
     <HeaderWrapper>
       <MenuButton icon={faBars} onClick={handleClick} />
-      <PulseAnimation>
+      <HeartBeatAnimation>
         <Logo fontSize="2.5rem">
           <StyledIcon icon={faPaperPlane} $paddingRight="0.5rem" />
           Triplify
         </Logo>
+      </HeartBeatAnimation>
 
-        <CustomNav $isActive={isActive}>
-          <ul>
-            {links.map((link, index) => (
-              <NavLink
-                key={`${index}-${link.label}`}
-                href={link.href}
-                label={link.label}
-              />
-            ))}
-          </ul>
-        </CustomNav>
-        <Button>Book Now</Button>
-      </PulseAnimation>
+      <CustomNav $isActive={isActive}>
+        <ul>
+          {links.map((link, index) => (
+            <NavLink
+              key={`${index}-${link.label}`}
+              href={link.href}
+              label={link.label}
+            />
+          ))}
+        </ul>
+      </CustomNav>
+      <Button>Book Now</Button>
     </HeaderWrapper>
   );
 };

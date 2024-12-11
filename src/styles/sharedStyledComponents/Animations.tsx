@@ -16,11 +16,11 @@ export const SlideUpAnimation = ({ children }: AnimationProps) => (
     {children}
   </Slide>
 );
-export const PulseAnimation = ({ children }: AnimationProps) => (
+export const HeartBeatAnimation = ({ children }: AnimationProps) => (
   <AttentionSeeker
-    effect="pulse"
+    effect="heartBeat"
     delay={300}
-    duration={1000}
+    duration={1500}
     triggerOnce={true}
   >
     {children}
