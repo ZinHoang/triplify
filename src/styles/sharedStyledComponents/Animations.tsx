@@ -1,4 +1,7 @@
-import React, { ReactNode } from 'react';
+import {
+  // React,
+  ReactNode,
+} from 'react';
 import { AttentionSeeker, Fade, Slide, Zoom } from 'react-awesome-reveal';
 
 interface AnimationProps {

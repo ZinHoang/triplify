@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { About } from './about';
 import { Banner } from './banner/Banner';
 import { Blogs } from './blogs/Blogs';

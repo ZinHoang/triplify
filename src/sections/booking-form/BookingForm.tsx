@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Button, FadeUpAnimation } from '../../styles/sharedStyledComponents';
 import { BookingFormWrapper, InputContainer } from './BookingForm.styles';
 
@@ -29,5 +29,3 @@ export const BookingForm = () => {
     </FadeUpAnimation>
   );
 };
-
-

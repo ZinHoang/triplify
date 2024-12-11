@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Button } from '../../styles/sharedStyledComponents';
 import { BannerWraper } from './Banner.styles';
 
