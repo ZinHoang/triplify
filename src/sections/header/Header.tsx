@@ -36,7 +36,11 @@ export const Header = () => {
         <CustomNav $isActive={isActive}>
           <ul>
             {links.map((link, index) => (
-              <NavLink key={index} href={link.href} label={link.label} />
+              <NavLink
+                key={`${index}-${link.label}`}
+                href={link.href}
+                label={link.label}
+              />
             ))}
           </ul>
         </CustomNav>

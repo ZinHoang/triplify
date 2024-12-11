@@ -82,9 +82,9 @@ export const Gallery = () => {
       </HeadingContainer>
       <GalleryWrapper>
         {galleryImages.map((image, index) => (
-          <ZoomUpAnimation>
-            <GalleryImageContainer key={index}>
-              <img src={image.src} alt={image.alt} />
+          <ZoomUpAnimation key={`${index}-${image.title}`}>
+            <GalleryImageContainer>
+              <img loading="lazy" src={image.src} alt={image.alt} />
               <span>{image.description}</span>
               <h3>{image.title}</h3>
             </GalleryImageContainer>

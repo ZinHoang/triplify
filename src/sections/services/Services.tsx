@@ -59,8 +59,8 @@ export const Services = () => {
 
       <GridLayout $columnWidth="32rem">
         {services.map((service, index) => (
-          <FadeRightAnimation>
-            <ServicesCard key={index}>
+          <FadeRightAnimation key={`${index}-${service.title}`}>
+            <ServicesCard>
               <ContentContainer>
                 <StyledIcon
                   icon={service.icon}

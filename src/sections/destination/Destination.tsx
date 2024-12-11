@@ -110,8 +110,8 @@ export const Destination = () => {
       </HeadingContainer>
       <GridLayout $columnWidth="27rem">
         {cards.map((card, index) => (
-          <ZoomUpAnimation>
-            <Card key={index}>
+          <ZoomUpAnimation key={`${index}-${card.title}`}>
+            <Card>
               <ImageContainer>
                 <Image src={card.src} alt={card.alt} />
               </ImageContainer>

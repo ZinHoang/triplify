@@ -74,8 +74,8 @@ export const Blogs = () => {
       </HeadingContainer>
 
       <GridLayout $columnWidth="27rem">
-        {blogPosts.map((post) => (
-          <SlideUpAnimation>
+        {blogPosts.map((post, index) => (
+          <SlideUpAnimation key={`${index}-${post.title}`}>
             <Card>
               <ImageContainer>
                 <Image src={post.src} alt={post.alt} />
