@@ -14,7 +14,43 @@ import {
   faFaceGrinHearts,
   faFaceSmileBeam,
 } from '@fortawesome/free-solid-svg-icons';
-import { StyledIcon } from '../../styles/sharedStyledComponents';
+import {
+  FadeLeftAnimation,
+  StyledIcon,
+} from '../../styles/sharedStyledComponents';
+
+const reviews = [
+  {
+    text: 'The trip was absolutely amazing !',
+    icon: faFaceGrinHearts,
+    name: 'John Vague',
+    job: 'Designer',
+  },
+  {
+    text: 'Truly a once-in-a-lifetime experience !',
+    icon: faFaceGrinStars,
+    name: 'Emily Jackquie',
+    job: 'Travel Blogger',
+  },
+  {
+    text: 'Every moment was unforgettable.',
+    icon: faFaceGrinBeam,
+    name: 'Jane Roller',
+    job: 'Photographer',
+  },
+  {
+    text: 'The guides were very knowledgeable.',
+    icon: faFaceDizzy,
+    name: 'Michael Brendon',
+    job: 'Adventurer',
+  },
+  {
+    text: "❤️ Exceptional services and stunning locations. I can't wait to book my next trip.",
+    icon: faFaceSmileBeam,
+    name: 'Sarah Wilson',
+    job: 'Nature Enthusiast',
+  },
+];
 
 export const Reviews = () => {
   return (
@@ -31,72 +67,22 @@ export const Reviews = () => {
         </p>
       </ReviewsContent>
       <ReviewsCardContainer>
-        <ReviewsCard>
-          <p>The trip was absolutely amazing!</p>
-          <UserDetail>
-            <StyledIcon icon={faFaceGrinHearts} />
-            <UserNameAndJob>
-              <h3>John Vague</h3>
-              <span>
-                <i> Designer</i>
-              </span>
-            </UserNameAndJob>
-          </UserDetail>
-        </ReviewsCard>
-        <ReviewsCard>
-          <p>Every moments were unforgettable.</p>
-          <UserDetail>
-            <StyledIcon icon={faFaceGrinBeam} />
-            <UserNameAndJob>
-              <h3>Jane Roller</h3>
-              <span>
-                <i> Photographer</i>
-              </span>
-            </UserNameAndJob>
-          </UserDetail>
-        </ReviewsCard>
-        <ReviewsCard>
-          <p>Truly a once-in-a-lifetime experience.</p>
-          <UserDetail>
-            <StyledIcon icon={faFaceGrinStars} />
-            <UserNameAndJob>
-              <h3>Emily Jackquie</h3>
-              <span>
-                <i>Travel Blogger</i>
-              </span>
-            </UserNameAndJob>
-          </UserDetail>
-        </ReviewsCard>
-        <ReviewsCard>
-          <p>
-            The trip was absolutely amazing! The guides were knowledgeable and
-            the scenery was breathtaking.
-          </p>
-          <UserDetail>
-            <StyledIcon icon={faFaceDizzy} />
-            <UserNameAndJob>
-              <h3>Michael Brendon</h3>
-              <span>
-                <i>Adventurer</i>
-              </span>
-            </UserNameAndJob>
-          </UserDetail>
-        </ReviewsCard>
-        <ReviewsCard>
-          <p>
-            Exceptional service and stunning locations. I can't wait to book my
-            next trip! Everything was perfect from start to finish.
-          </p>
-          <UserDetail>
-            <StyledIcon icon={faFaceSmileBeam} />
-            <UserNameAndJob>
-              <h3>Sarah Wilson</h3>
-              <span>
-                <i>Nature Enthusiast</i>
-              </span>
-            </UserNameAndJob>
-          </UserDetail>
-        </ReviewsCard>
+        {reviews.map((review, index) => (
+          <FadeLeftAnimation>
+            <ReviewsCard key={index}>
+              <p>{review.text}</p>
+              <UserDetail>
+                <StyledIcon icon={review.icon} />
+                <UserNameAndJob>
+                  <h3>{review.name}</h3>
+                  <span>
+                    <i>{review.job}</i>
+                  </span>
+                </UserNameAndJob>
+              </UserDetail>
+            </ReviewsCard>
+          </FadeLeftAnimation>
+        ))}
       </ReviewsCardContainer>
     </ReviewsWrapper>
   );
