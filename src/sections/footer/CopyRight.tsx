@@ -5,7 +5,8 @@ export const CopyRight = () => {
   return (
     <CopyRightWrapper>
       <div>
-        🤙 Developed by <a href="https://github.com/ZinHoang">Zin Hoang</a>{' '}
+        🤙 Developed by{' '}
+        <a href="https://github.com/ZinHoang/triplify">Zin Hoang</a>{' '}
       </div>
       <span> © 2024 </span>
     </CopyRightWrapper>

@@ -16,6 +16,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {
   FadeLeftAnimation,
+  FadeRightAnimation,
   StyledIcon,
 } from '../../styles/sharedStyledComponents';
 
@@ -45,7 +46,7 @@ const reviews = [
     job: 'Adventurer',
   },
   {
-    text: "❤️ Exceptional services and stunning locations. I can't wait to book my next trip.",
+    text: "❤️ Exceptional services and stunning locations. I can't wait to book my next trip !",
     icon: faFaceSmileBeam,
     name: 'Sarah Wilson',
     job: 'Nature Enthusiast',
@@ -56,20 +57,22 @@ export const Reviews = () => {
   return (
     <ReviewsWrapper>
       <ReviewsContent>
-        <span>TESTIMONIALS</span>
-        <h3>What our customers say</h3>
-        <p>
-          Our customers rave about the unforgettable experiences they've had
-          with us. From breathtaking views to heart-pounding adventures, each
-          trip is meticulously planned to ensure a perfect blend of excitement
-          and relaxation. Discover why so many choose us for their nature
-          escapades and create your own story of wonder and awe.
-        </p>
+        <FadeLeftAnimation>
+          <span>TESTIMONIALS</span>
+          <h3>What our customers say</h3>
+          <p>
+            Our customers rave about the unforgettable experiences they've had
+            with us. From breathtaking views to heart-pounding adventures, each
+            trip is meticulously planned to ensure a perfect blend of excitement
+            and relaxation. Discover why so many choose us for their nature
+            escapades and create your own story of wonder and awe.
+          </p>
+        </FadeLeftAnimation>
       </ReviewsContent>
       <ReviewsCardContainer>
         {reviews.map((review, index) => (
-          <FadeLeftAnimation>
-            <ReviewsCard key={index}>
+          <FadeRightAnimation key={`${index}-${review.name}`}>
+            <ReviewsCard>
               <p>{review.text}</p>
               <UserDetail>
                 <StyledIcon icon={review.icon} />
@@ -81,7 +84,7 @@ export const Reviews = () => {
                 </UserNameAndJob>
               </UserDetail>
             </ReviewsCard>
-          </FadeLeftAnimation>
+          </FadeRightAnimation>
         ))}
       </ReviewsCardContainer>
     </ReviewsWrapper>
