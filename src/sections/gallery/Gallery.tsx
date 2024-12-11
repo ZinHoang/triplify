@@ -3,7 +3,7 @@ import {
   HeadingContainer,
   TitleSpan,
   PrimaryHeading,
-  ZoomInUpAnimation,
+  ZoomUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import { GalleryWrapper, GalleryImageContainer } from './Gallery.styles';
 import TulumMexico from '../../assets/images/Tulum-Mexico.jpg';
@@ -33,7 +33,7 @@ const galleryImages = [
     src: GloomyDayNZ,
     alt: 'Gloomy day in New Zealand',
     description: 'Embrace the serene gloom',
-    title: 'New Zealand\'s Gloomy Day',
+    title: "New Zealand's Gloomy Day",
   },
   {
     src: RoadTripNZ,
@@ -80,17 +80,17 @@ export const Gallery = () => {
         <TitleSpan>Captured Moments</TitleSpan>
         <PrimaryHeading>Preserving stories in every frame</PrimaryHeading>
       </HeadingContainer>
-      <ZoomInUpAnimation>
-        <GalleryWrapper>
-          {galleryImages.map((image, index) => (
+      <GalleryWrapper>
+        {galleryImages.map((image, index) => (
+          <ZoomUpAnimation>
             <GalleryImageContainer key={index}>
               <img src={image.src} alt={image.alt} />
               <span>{image.description}</span>
               <h3>{image.title}</h3>
             </GalleryImageContainer>
-          ))}
-        </GalleryWrapper>
-      </ZoomInUpAnimation>
+          </ZoomUpAnimation>
+        ))}
+      </GalleryWrapper>
     </>
   );
 };

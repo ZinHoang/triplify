@@ -6,7 +6,10 @@ export { Card } from './Card.styles';
 export { ImageContainer, Image } from './Image.styles';
 export { Logo } from './Logo.styles';
 export {
-  ZoomInUpAnimation,
-  FadeUpAnimation,
+  ZoomUpAnimation,
+  SlideUpAnimation,
+  FadeLeftAnimation,
   FadeRightAnimation,
-} from './Animations.styles';
+  FadeUpAnimation,
+  PulseAnimation,
+} from './Animations';

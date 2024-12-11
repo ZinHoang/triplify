@@ -8,7 +8,7 @@ import {
   PrimaryHeading,
   StyledIcon,
   TitleSpan,
-  FadeUpAnimation,
+  ZoomUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import HaLongBay from '../../assets/images/HaLong-bay.jpg';
 import MountainVietnam from '../../assets/images/mountain-Vietnam.jpg';
@@ -42,26 +42,27 @@ export const Destination = () => {
     {
       src: RuralSunset,
       alt: 'rural sunset in New Zealand',
-      title: "New Zealand's rural sunset",
+      title: 'New Zealand sunset',
       description: 'Witness breathtaking rural landscapes at dusk.',
     },
     {
       src: QueenstownNz,
       alt: 'marvelous view in Queenstown NZ',
-      title: 'Queenstown, New Zealand',
-      description: 'Experience adventure and serenity in this stunning town.',
+      title: 'Queenstown',
+      description:
+        'Experience adventure and serenity in this stunning town of New Zealand.',
     },
     {
       src: RuralVietnam,
       alt: 'rural in Vietnam',
-      title: 'Rural Charm of Vietnam',
+      title: `Vietnam's rice terraces`,
       description: "Discover Vietnam's picturesque countryside villages.",
     },
     {
       src: TaiwanBuddha,
       alt: 'gigantic Buddha statue in a Taiwanese temple',
-      title: 'Fo Guang Shan Temple, Taiwan',
-      description: "Marvel at the serenity of Taiwan's monumental Buddha.",
+      title: 'Fo Guang Shan',
+      description: "Marvel at the serenity of Taiwan's monumental temple.",
     },
     {
       src: KayakThroughCave,
@@ -96,7 +97,7 @@ export const Destination = () => {
     {
       src: MountainNZ,
       alt: 'mountain landscapes in New Zealand',
-      title: 'Mountain Peaks, New Zealand',
+      title: 'Mountain Peaks',
       description: "Discover the towering peaks of New Zealand's mountains.",
     },
   ];
@@ -107,9 +108,9 @@ export const Destination = () => {
         <TitleSpan>Our Favorite Places</TitleSpan>
         <PrimaryHeading>Your journey begins here</PrimaryHeading>
       </HeadingContainer>
-      <FadeUpAnimation>
-        <GridLayout $columnWidth="27rem">
-          {cards.map((card, index) => (
+      <GridLayout $columnWidth="27rem">
+        {cards.map((card, index) => (
+          <ZoomUpAnimation>
             <Card key={index}>
               <ImageContainer>
                 <Image src={card.src} alt={card.alt} />
@@ -122,9 +123,9 @@ export const Destination = () => {
                 </a>
               </ContentContainer>
             </Card>
-          ))}
-        </GridLayout>
-      </FadeUpAnimation>
+          </ZoomUpAnimation>
+        ))}
+      </GridLayout>
     </>
   );
 };

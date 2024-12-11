@@ -5,6 +5,7 @@ import {
   PrimaryHeading,
   GridLayout,
   StyledIcon,
+  FadeRightAnimation,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, ServicesCard } from './Services.styles';
 import {
@@ -58,17 +59,19 @@ export const Services = () => {
 
       <GridLayout $columnWidth="32rem">
         {services.map((service, index) => (
-          <ServicesCard key={index}>
-            <ContentContainer>
-              <StyledIcon
-                icon={service.icon}
-                $fontSize="5rem"
-                $marginBottom="1rem"
-              />
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </ContentContainer>
-          </ServicesCard>
+          <FadeRightAnimation>
+            <ServicesCard key={index}>
+              <ContentContainer>
+                <StyledIcon
+                  icon={service.icon}
+                  $fontSize="5rem"
+                  $marginBottom="1rem"
+                />
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </ContentContainer>
+            </ServicesCard>
+          </FadeRightAnimation>
         ))}
       </GridLayout>
     </>

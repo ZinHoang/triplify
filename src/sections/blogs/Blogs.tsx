@@ -9,6 +9,7 @@ import {
   ImageContainer,
   StyledIcon,
   Image,
+  SlideUpAnimation,
 } from '../../styles/sharedStyledComponents';
 import { ContentContainer, IconContainer } from './Blogs.styles';
 import ScubaDiving from '../../assets/images/scuba-diving.jpg';
@@ -40,7 +41,7 @@ export const Blogs = () => {
     {
       src: JungleNZ,
       alt: 'Lush jungle landscape in New Zealand',
-      title: "Explore New Zealand's wild beauty",
+      title: `Explore nature's wild beauty`,
       description:
         "Venture deep into untouched paradise of nature amidst New Zealand's lush forests.",
       date: '3rd Oct, 2023',
@@ -73,24 +74,26 @@ export const Blogs = () => {
       </HeadingContainer>
 
       <GridLayout $columnWidth="27rem">
-        {blogPosts.map((post, index) => (
-          <Card key={index}>
-            <ImageContainer>
-              <Image src={post.src} alt={post.alt} />
-            </ImageContainer>
-            <ContentContainer>
-              <a href="#">{post.title}</a>
-              <p>{post.description}</p>
-              <IconContainer>
-                <p>
-                  <StyledIcon icon={faClock} /> {post.date}
-                </p>
-                <p>
-                  <StyledIcon icon={faUser} /> By {post.author}
-                </p>
-              </IconContainer>
-            </ContentContainer>
-          </Card>
+        {blogPosts.map((post) => (
+          <SlideUpAnimation>
+            <Card>
+              <ImageContainer>
+                <Image src={post.src} alt={post.alt} />
+              </ImageContainer>
+              <ContentContainer>
+                <a href="#">{post.title}</a>
+                <p>{post.description}</p>
+                <IconContainer>
+                  <p>
+                    <StyledIcon icon={faClock} /> {post.date}
+                  </p>
+                  <p>
+                    <StyledIcon icon={faUser} /> By {post.author}
+                  </p>
+                </IconContainer>
+              </ContentContainer>
+            </Card>
+          </SlideUpAnimation>
         ))}
       </GridLayout>
     </>

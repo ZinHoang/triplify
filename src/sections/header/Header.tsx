@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { faPaperPlane, faBars } from '@fortawesome/free-solid-svg-icons';
 import { HeaderWrapper, CustomNav, MenuButton } from './Header.styles';
-import { Button, Logo, StyledIcon } from '../../styles/sharedStyledComponents';
+import {
+  Button,
+  Logo,
+  PulseAnimation,
+  StyledIcon,
+} from '../../styles/sharedStyledComponents';
 import { Link } from 'react-scroll';
 
 export const Header = () => {
@@ -22,26 +27,21 @@ export const Header = () => {
   return (
     <HeaderWrapper>
       <MenuButton icon={faBars} onClick={handleClick} />
-      <Logo
-        fontSize="2.5rem"
-        data-aos="zoom-in"
-        data-aos-delay="300"
-        data-aos-duration="1500"
-      >
-        <StyledIcon icon={faPaperPlane} $paddingRight="0.5rem" />
-        Triplify
-      </Logo>
-      <CustomNav $isActive={isActive}>
-        <ul>
-          {links.map((link, index) => (
-            <NavLink key={index} href={link.href} label={link.label} />
-          ))}
-        </ul>
-      </CustomNav>
+      <PulseAnimation>
+        <Logo fontSize="2.5rem">
+          <StyledIcon icon={faPaperPlane} $paddingRight="0.5rem" />
+          Triplify
+        </Logo>
 
-      <Button data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1500">
-        Book Now
-      </Button>
+        <CustomNav $isActive={isActive}>
+          <ul>
+            {links.map((link, index) => (
+              <NavLink key={index} href={link.href} label={link.label} />
+            ))}
+          </ul>
+        </CustomNav>
+        <Button>Book Now</Button>
+      </PulseAnimation>
     </HeaderWrapper>
   );
 };
@@ -54,14 +54,7 @@ interface NavLinkProps {
 const NavLink = ({ href, label }: NavLinkProps) => {
   return (
     <li>
-      <Link
-        to={href}
-        smooth={true}
-        duration={500}
-        data-aos="zoom-in-up"
-        data-aos-delay="300"
-        data-aos-duration="2500"
-      >
+      <Link to={href} smooth={true} duration={500}>
         {label}
       </Link>
     </li>
