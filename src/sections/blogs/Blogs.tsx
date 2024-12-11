@@ -1,4 +1,3 @@
-// import React from 'react';
 import { faClock, faUser } from '@fortawesome/free-solid-svg-icons';
 import {
   HeadingContainer,

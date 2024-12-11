@@ -1,4 +1,3 @@
-// import React from 'react';
 import { Button, FadeUpAnimation } from '../../styles/sharedStyledComponents';
 import {
   ContentText,
