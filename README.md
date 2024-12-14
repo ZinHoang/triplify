@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+# Triplify App 
+![Triplify App Thumbnail](assets/images/Triplify_thumbnail.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **Live Link:** [Triplify App](https://trip-lify.netlify.app/)
 
-Currently, two official plugins are available:
+- **Acknowledgements:** big thanks to [Mr. Web Designer](https://www.youtube.com/@MrWebDesignerAnas) for the [tutorial video](https://www.youtube.com/watch?v=KRKMlwywJB4).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About This Repository
+This is a playground for me to learn more about CSS, styled-components, and making web apps mobile responsive.
 
-## Expanding the ESLint configuration
+## What Did I Learn?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Challenges with Outdated Technologies
 
-- Configure the top-level `parserOptions` property like this:
+Sometimes, libraries used in tutorials can be outdated and might not work well with the latest technology. For example, the `AOS` aniamtion library works for simple components like `<p>` and `<span>`, but it didn't work well with custom styled-components. It took me a day to troubleshoot issues with AOS animations, whereas it only took me two hours to learn and apply animations from a more modern library, `react-awesome-reveal`. This newer library supports the latest React version (v18) and works out of the box in most cases.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Implementing a Dynamic Hamburger Menu
+
+I learned that one way to display the hamburger menu dynamically based on the device's screen width is by using `clip-path: polygon(...)`. Here's the code used in this app:
+```css
+// Get the polygon values at https://bennettfeely.com/clippy/
+clip-path: ${({ $isActive }) =>
+  $isActive
+    ? 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
+    : 'polygon(0 0, 100% 0, 100% 0, 0 0)'};
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Practicing CSS Flexbox
+
+I got to practice CSS Flexbox layout a bit more.
+
+### Enhancing User Experience with External Libraries
+
+Using external libraries can be beneficial. For instance, `react-scroll` makes scrolling smooth when users navigate up and down the page. Without this, scrolling can be laggy due to many high-quality images being rendered on the page.
+
+
+### Building a Reusable Grid Layout
+I learned to create a reusable grid layout. Here's the code:
+
+```css
+const grid = (val: string) => css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(${val}, 1fr));
+  gap: 1.5rem;
+`;
+export const GridLayout = styled.div<{ $columnWidth: string }>`
+  ${({ $columnWidth }) => grid($columnWidth)};
+  color: ${({ theme }) => theme.lightColor};
+`;
+```
+The CSS property `grid-template-columns: repeat(auto-fit, minmax(${val}, 1fr));` is used to define the layout of columns in a CSS Grid container. Here's a breakdown:
+
+- `repeat(auto-fit, ...)` repeats the specified column definition as many times as possible to fit the container. `auto-fit` means the grid will automatically adjust the number of columns to fit the available space.
+- `minmax(${val}, 1fr)` sets a minimum and maximum size for each column.
+  - `${val}`is the minimum size of the column, typically a variable or a fixed size (e.g., 200px).
+  - `1fr`is the maximum size of the column. Each column can grow to take up a fraction of the remaining space in the container.
+
+Putting it all together, `grid-template-columns: repeat(auto-fit, minmax(${val}, 1fr))` creates a responsive grid layout where the number of columns adjusts automatically to fit the container width, and each column can grow to take up a fraction of the remaining space, ensuring that the columns fill the container evenly 👌.
