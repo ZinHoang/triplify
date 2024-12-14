@@ -1,5 +1,6 @@
 # Triplify App 
 - **Live Link:** [Triplify App](https://trip-lify.netlify.app/)
+
 ![Triplify App Thumbnail](src/assets/images/Triplify_thumbnail.png)
 
 
