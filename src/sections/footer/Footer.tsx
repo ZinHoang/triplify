@@ -20,6 +20,7 @@ import {
   ColumnContainer,
   EmailInput,
   FooterWrapper,
+  QuickLink,
   QuickLinksContainer,
   SocialMediaContainer,
 } from './Footer.styles';
@@ -27,12 +28,12 @@ import { CopyRight } from './CopyRight';
 
 export const Footer = () => {
   const links = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#gallery', label: 'Gallery' },
-    { href: '#destination', label: 'Destination' },
-    { href: '#services', label: 'Services' },
-    { href: '#blogs', label: 'Blogs' },
+    { href: 'home', label: 'Home' },
+    { href: 'about', label: 'About' },
+    { href: 'gallery', label: 'Gallery' },
+    { href: 'destination', label: 'Destination' },
+    { href: 'services', label: 'Services' },
+    { href: 'blogs', label: 'Blogs' },
   ];
 
   return (
@@ -68,10 +69,10 @@ export const Footer = () => {
             <h3>Quick Links</h3>
             <QuickLinksContainer>
               {links.map((link) => (
-                <a key={link.href} href={link.href}>
+                <QuickLink to={link.href} smooth={true} duration={500}>
                   <StyledIcon icon={faArrowRight} $paddingRight="0.8rem" />{' '}
                   {link.label}
-                </a>
+                </QuickLink>
               ))}
             </QuickLinksContainer>
           </ColumnContainer>

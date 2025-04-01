@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import { StyledIcon } from './../../styles/sharedStyledComponents/FontAwesomeIcon.styles';
 import styled from 'styled-components';
 
@@ -47,18 +48,22 @@ export const QuickLinksContainer = styled.div`
   color: ${({ theme }) => theme.lightColor};
   padding: 1rem 0;
   display: block;
+`;
 
-  a {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
+export const QuickLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: ${({ theme }) => theme.lightColor};
+  text-decoration: none;
+  cursor: pointer;
 
-    &:hover {
-      color: ${({ theme }) => theme.brightAqua};
+  &:hover {
+    color: ${({ theme }) => theme.brightAqua};
 
-      ${StyledIcon} {
-        padding-right: 2rem;
-      }
+    ${StyledIcon} {
+      padding-right: 2rem;
     }
   }
 `;
